@@ -1,3 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'Knowledge should be free'
+baseURL: https://example.org/
+languageCode: en-us
+
+title: Knowledge should be free
+
+copyright: Copyright Antoine Leudière. Tous droits réservés. Projet sous [licence GPL-3.0-only](https://choosealicense.com/licenses/gpl-3.0/).
