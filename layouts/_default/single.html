@@ -5,6 +5,9 @@
 
   <section id='material'>
 
+    <!-- There is only one file per material category (poly, td, -->
+    <!-- etc), so one can use GetMatch instead of Match. -->
+
     {{ with .Resources.GetMatch "*-poly.*" }}
       <a href='{{ . }}'>Poly</a>
     {{ end }}
@@ -14,11 +17,11 @@
     {{ end }}
 
     {{ with .Resources.GetMatch "*-anales.*" }}
-      <a href='{{ . }}'>anales</a>
+      <a href='{{ . }}'>Anales</a>
     {{ end }}
 
     {{ with .Resources.GetMatch "*-misc.*" }}
-      <a href='{{ . }}'>misc</a>
+      <a href='{{ . }}'>Misc</a>
     {{ end }}
 
   </section>
