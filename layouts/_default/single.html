@@ -1,10 +1,26 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <!-- Download course material -->
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <section id='material'>
+
+    {{ with .Resources.GetMatch "material/*-poly.*" }}
+      <a href='{{ . }}'>Poly</a>
+    {{ end }}
+
+    {{ with .Resources.GetMatch "material/*-td.*" }}
+      <a href='{{ . }}'>TD</a>
+    {{ end }}
+
+    {{ with .Resources.GetMatch "material/*-anales.*" }}
+      <a href='{{ . }}'>anales</a>
+    {{ end }}
+
+    {{ with .Resources.GetMatch "material/*-misc.*" }}
+      <a href='{{ . }}'>misc</a>
+    {{ end }}
+
+  </section>
+
 {{ end }}
