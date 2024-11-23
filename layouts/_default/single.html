@@ -5,19 +5,19 @@
 
   <section id='material'>
 
-    {{ with .Resources.GetMatch "material/*-poly.*" }}
+    {{ with .Resources.GetMatch "*-poly.*" }}
       <a href='{{ . }}'>Poly</a>
     {{ end }}
 
-    {{ with .Resources.GetMatch "material/*-td.*" }}
+    {{ with .Resources.GetMatch "*-td.*" }}
       <a href='{{ . }}'>TD</a>
     {{ end }}
 
-    {{ with .Resources.GetMatch "material/*-anales.*" }}
+    {{ with .Resources.GetMatch "*-anales.*" }}
       <a href='{{ . }}'>anales</a>
     {{ end }}
 
-    {{ with .Resources.GetMatch "material/*-misc.*" }}
+    {{ with .Resources.GetMatch "*-misc.*" }}
       <a href='{{ . }}'>misc</a>
     {{ end }}
 
