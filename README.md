@@ -36,3 +36,8 @@ git clone https://github.com/kryzar/knowledge-should-be-free
 cd knowledge-should-be-free
 hugo server
 ```
+
+Et pour compiler l'intégralité du site, remplacer `hugo server` par `hugo
+build`. Un répertoire `public` est alors créé ; la page d'accueil est le
+fichier `index.html`, il faut l'ouvrir dans un navigateur pour commencer la
+navigation.
