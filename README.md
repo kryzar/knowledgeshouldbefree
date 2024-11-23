@@ -9,9 +9,9 @@ statiques*](https://jamstack.org/generators/). Cela permet de définir un unique
 *template* HTML pour les pages de cours, et d'écrire le contenu des pages web
 en Markdown. C'est bien plus digeste.
 
-Il y a donc une phase de compilation pour (*build*) pour pouvoir visualiser le
-site. Après avoir installé Hugo, et cloné le dépôt, ouvrir un terminal, aller
-dans le répertoire du dépôt, et exécuter :
+Il y a donc une phase de compilation (*build*) pour pouvoir visualiser le site.
+Après avoir installé Hugo, et cloné le dépôt, ouvrir un terminal, aller dans le
+répertoire du dépôt, et exécuter :
 
 ```sh
 hugo server
