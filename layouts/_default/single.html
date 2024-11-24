@@ -50,7 +50,8 @@
            so one can use GetMatch instead of Match. */}}
 
       {{ with $.Resources.GetMatch .glob }}
-        <a href='{{ . }}' class='material-resource-div'>
+        <a href='{{ . }}' class='material-resource-div'
+                          data-type='{{ $resource.name }}'>
           <h1 class='material-resource-title'>{{ $resource.name }}</h1>
         </a>
       {{ end }}

@@ -1,5 +1,12 @@
 $vp_width: 800px
 
+$gradient-4: #32127A
+$gradient-3: #4118A0
+$gradient-2: #4F1DC3
+$gradient-1: #602ADF
+
+$white: #F9F8F8
+
 html
     height: 100vh
 
@@ -33,7 +40,29 @@ footer
 .material-resource-title
     width: $vp_width
     margin: 0 auto
-    padding: 20px 0
+
+/* COLORS
+
+body, html
+    background: $white
+
+.material-resource-title
+    color: $white
+
+.material-resource-div
+  /* CSS data attributes, yeah
+
+  &[data-type="Poly"]
+    background-color: $gradient-4
+
+  &[data-type="TD"]
+    background-color: $gradient-3
+
+  &[data-type="Anales"]
+    background-color: $gradient-2
+
+  &[data-type="Misc"]
+    background-color: $gradient-1
 
 
 /* A few notes:
@@ -42,3 +71,7 @@ footer
 /* - Documentation for SASS variables: https://sass-lang.com/documentation/variables/
 /* - Careful if you use @import, it is deprecated as of Dart Sass 1.80:
          https://sass-lang.com/blog/import-is-deprecated/
+/* - Data attributes in CSS: https://css-tricks.com/a-complete-guide-to-data-attributes/
+
+/* A few beautiful palettes:
+/* - Persian indigo and Wisteria: https://coolors.co/32127a-bc96e6
