@@ -6,31 +6,54 @@
 
   <section id='material'>
 
-    <!-- There is only one file per material category (poly, td, etc), -->
-    <!-- so one can use GetMatch instead of Match.                     -->
+    {{/* Ok so here is how you avoid code duplication here. You have
+         three options here.
 
-    {{ with .Resources.GetMatch "*-poly.*" }}
-    <a href='{{ . }}' class='material-resource-div'>
-      <h1 class='material-resource-title'>Poly</h1>
-    </a>
-    {{ end }}
+       1. Use partial templates. This is the prefered solution
+          according to Haiku and 4o. BUT, it is a pain to transfer
+          variables to the template. Normally, the syntax for a template
+          is:
 
-    {{ with .Resources.GetMatch "*-td.*" }}
-    <a href='{{ . }}' class='material-resource-div'>
-      <h1 class='material-resource-title'>TD</h1>
-    </a>
-    {{ end }}
+            {\{  template your_template . }}
+        
+          (Escaping this, otherwise Hugo screams.)
+          But here, we need extra args (glob, name, etc). A solution is
+          to pass the page AND the context. This kinda works, for the
+          price of horrible argument syntax and an extra file. See this:
 
-    {{ with .Resources.GetMatch "*-anales.*" }}
-    <a href='{{ . }}' class='material-resource-div'>
-      <h1 class='material-resource-title'>Misc</h1>
-    </a>
-    {{ end }}
+            https://mertbakir.gitlab.io/hugo/pass-arguments-in-partials-hugo/
 
-    {{ with .Resources.GetMatch "*-misc.*" }}
-    <a href='{{ . }}' class='material-resource-div'>
-      <h1 class='material-resource-title'>Misc</h1>
-    </a>
+      2. Use shortcodes. My understanding is that it's basically the
+         same as templates, but shortcodes are to be used in contents,
+         not in layout definitions. And indeed, I tried to use  a
+         template with
+
+           {\{< my_shortcode >}}
+
+         (Once again escaping.)
+         and Hugo screamed at me because they didn't like the < and >.
+         And indeed:
+
+           https://discourse.gohugo.io/t/highlight-html-unexpected-in-command-built-site-for-language-en/4468
+
+         In any case, I don't really care, as the problems I have with
+         partials, I'd have with shortcodes.
+
+      3. Good ol' loop. Yeah, that's the one. */}}
+
+    {{ range $resource := slice (dict "glob" "*-poly.*"   "name" "Poly")
+                                (dict "glob" "*-td.*"     "name" "TD")
+                                (dict "glob" "*-anales.*" "name" "Anales")
+                                (dict "glob" "*-misc.*"   "name" "Misc")
+    }}
+      {{/* There is only one file per material category (poly, td, etc),
+           so one can use GetMatch instead of Match. */}}
+
+      {{ with $.Resources.GetMatch .glob }}
+        <a href='{{ . }}' class='material-resource-div'>
+          <h1 class='material-resource-title'>{{ $resource.name }}</h1>
+        </a>
+      {{ end }}
     {{ end }}
 
   </section>
