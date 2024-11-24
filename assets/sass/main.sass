@@ -26,6 +26,11 @@ main
     flex: 1 0 auto
 
 footer
+    text-align: center
+    /* Display the footer as a flex, with two main rows/lines
+    /* N.b. These two lines are div's without class or id
+    display: flex
+    flex-direction: column
     /* For the sticky footer:
     flex-shrink: 0
 
@@ -51,18 +56,17 @@ body, html
 
 .material-resource-div
   /* CSS data attributes, yeah
-
   &[data-type="Poly"]
     background-color: $gradient-4
-
   &[data-type="TD"]
     background-color: $gradient-3
-
   &[data-type="Anales"]
     background-color: $gradient-2
-
   &[data-type="Misc"]
     background-color: $gradient-1
+
+footer, footer a
+    color: grey
 
 
 /* A few notes:
