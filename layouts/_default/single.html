@@ -10,19 +10,27 @@
     <!-- so one can use GetMatch instead of Match.                     -->
 
     {{ with .Resources.GetMatch "*-poly.*" }}
-      <a href='{{ . }}'>Poly</a>
+    <a href='{{ . }}' class='material-resource-div'>
+      <h1 class='material-resource-title'>Poly</h1>
+    </a>
     {{ end }}
 
     {{ with .Resources.GetMatch "*-td.*" }}
-      <a href='{{ . }}'>TD</a>
+    <a href='{{ . }}' class='material-resource-div'>
+      <h1 class='material-resource-title'>TD</h1>
+    </a>
     {{ end }}
 
     {{ with .Resources.GetMatch "*-anales.*" }}
-      <a href='{{ . }}'>Anales</a>
+    <a href='{{ . }}' class='material-resource-div'>
+      <h1 class='material-resource-title'>Misc</h1>
+    </a>
     {{ end }}
 
     {{ with .Resources.GetMatch "*-misc.*" }}
-      <a href='{{ . }}'>Misc</a>
+    <a href='{{ . }}' class='material-resource-div'>
+      <h1 class='material-resource-title'>Misc</h1>
+    </a>
     {{ end }}
 
   </section>
