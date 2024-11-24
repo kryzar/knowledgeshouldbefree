@@ -1,6 +1,16 @@
 {{ define "main" }}
-  <h1>{{ .LinkTitle }}</h1>
-  <h2>{{ .Title }}, {{ .Params.Université }}, {{ .Params.Niveau }} </h2>
+  <section id='course-titles'>
+    <h1>{{ .LinkTitle }}</h1>
+    <h2>
+      <span id='course-titles-title'>
+        {{ .Title }}
+      </span>,
+      {{ .Params.Prof }},
+      {{ .Params.Université }},
+      {{ .Params.Niveau }},
+      {{ .Date | dateFormat "2006"}}
+    </h2>
+  </section>
 
   <!-- Download course material -->
 
