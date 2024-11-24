@@ -1,3 +1,15 @@
+<!-- normalize.css -->
+
+{{- with resources.Get "css/normalize.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+
+<!--
+     This entire block was written by Hugo by default,
+     so I might as well leave it as this for now,
+     even though I could just make it a oneliner...
+-->
+
 {{- with resources.Get "css/main.css" }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
