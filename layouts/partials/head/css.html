@@ -10,7 +10,8 @@
          https://gohugo.io/hugo-pipes/transpile-sass-to-css/#usage
 */}}
 
-{{- with resources.Get "scss/main.scss" | toCSS }}
+{{ $opts := dict "transpiler" "libsass" }}
+{{- with resources.Get "sass/main.sass" | toCSS $opts }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
