@@ -1,3 +1,5 @@
+$vp_width: 800px
+
 html
     height: 100vh
 
@@ -6,18 +8,18 @@ body
 
     /* Center, fix width
     margin: auto
-    max-width: 600px
+    max-width: $vp_width
 
-    /* Sticky footer
+    /* For the sticky footer:
     display: flex
     flex-direction: column
 
 main
-    /* Sticky footer
+    /* For the sticky footer:
     flex: 1 0 auto
 
 footer
-    /* Sticky footer
+    /* For the sticky footer:
     flex-shrink: 0
 
 .material-resource-div
@@ -29,7 +31,7 @@ footer
     text-decoration: none
 
 .material-resource-title
-    width: 600px
+    width: $vp_width
     margin: 0 auto
     padding: 20px 0
 
@@ -37,3 +39,6 @@ footer
 /* A few notes:
 /* - For sticky footers, see: https://css-tricks.com/couple-takes-sticky-footer/
 /* - For converting CSS to SASS, see: https://css2sass.herokuapp.com/ 
+/* - Documentation for SASS variables: https://sass-lang.com/documentation/variables/
+/* - Careful if you use @import, it is deprecated as of Dart Sass 1.80:
+         https://sass-lang.com/blog/import-is-deprecated/
