@@ -24,7 +24,7 @@ footer {
 }
 
 .material-resource-div {
-    background: red;
+    background: lightblue;
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
