@@ -84,7 +84,15 @@ $material-top-bottom-padding: 16px
     top: $material-top-bottom-padding
 
 footer
-  margin-top: 80px
+  margin:
+    top: 80px
+  // Here, I should use margin instead of padding. But, it doesn't work
+  // probably because of the sticky footer flex thing, and since the
+  // background is transparent, I do not care enough now (but eventually
+  // should) to fix it. However, if you now how to, please do it, or
+  // tell me how to do it. Love.
+  padding:
+    bottom: 15px
 
 ////////////
 // COLORS //
