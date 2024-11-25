@@ -96,7 +96,11 @@ $gradient-4: #32127A
 $gradient-3: #4118A0
 $gradient-2: #4F1DC3
 $gradient-1: #602ADF
+
+$wisteria: #BC96E6
+
 $white: #F9F8F8
+$gray-background: #D9D3D3
 
 body, html
     background: $white
@@ -132,7 +136,7 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Anales": $gradient-2
 #material
   &:hover
     .material-resource
-      background-color: #D9D3D3  // This should be moved...
+      background-color: $gray-background
 
     .material-resource:hover
       @each $type, $color in $material-colors
@@ -142,6 +146,9 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Anales": $gradient-2
 .material-resource
   // I don't mind a little transition...
   transition: background-color 0.1s ease
+
+#course-titles h1
+  color: $wisteria
 
 footer, footer a
     color: grey
@@ -160,6 +167,9 @@ footer, footer a
 
 #course-titles #course-titles-title
   font-style: italic
+
+#content h1
+  font-size: 120%
 
 /////////////////
 // A FEW NOTES //
