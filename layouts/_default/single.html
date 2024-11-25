@@ -69,8 +69,32 @@
 
   </section>
 
-  <section id='content'>
-    {{ .Content }}
+  <section id='course-description'>
+
+    {{/* So here, there are multiple options. Of course, the three file
+         resources must be treated differently, as they each are
+         displayed differently. An option is to range over a hashmap
+         where the keys are something like "résumé.md" and the values
+         are the corresponding "summary". HOWEVER, when iterating over
+         a map, Hugo does so by ascending order. I never asked for this,
+         but this is the default. Thank you Hugo. Thank you so much for
+         taking this initiative, and making it so obvious in the naming
+         of the `range` iterator:
+
+           https://gohugo.io/functions/go-template/range/#maps
+
+         So what I'm gonna do, even though it's ~~horrendous~~ French,
+         is iterating over a good ol' slice, and then use the
+         `nth-child` CSS selector.
+    */}}
+
+    {{ range $resource := slice "résumé.md" "niveau.md" "contenu.md" }}
+      {{ with $.Resources.GetMatch $resource }}
+        <section class='course-description-item'>
+          {{ .Content }}
+        </section>
+      {{ end }}
+    {{ end }}
   </section>
 
 {{ end }}
