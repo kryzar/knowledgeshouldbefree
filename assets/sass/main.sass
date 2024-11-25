@@ -1,21 +1,21 @@
-/****************/
-/* IMPORT FONTS */
-/****************/
+//////////////////
+// IMPORT FONTS //
+//////////////////
 
-/* The font (Inter) is free and open source. The following import
-/* snippet was freely taken from their website https://rsms.me/inter/.
+// The font (Inter) is free and open source. The following import
+// snippet was freely taken from their website https://rsms.me/inter/.
 
-/* Note that the font has features, to be enabled with
-/* `font-feature-settings`: https://rsms.me/inter/#faq-using-features.
+// Note that the font has features, to be enabled with
+// `font-feature-settings`: https://rsms.me/inter/#faq-using-features.
 
-/* Btw, as per the website, it is safe to import the font from rsms.me
-/* directly:
-/* > How reliable are the fonts served from rsms.me/inter?
-/* >
-/* > "https://rsms.me/inter/inter.css" and the Inter font files are
-/* > distributed globally over CloudFlare’s CDN. This is very reliable
-/* > and fast by automatically serving the fonts from a server near your
-/* > users, minimizing the latency of your web pages.
+// Btw, as per the website, it is safe to import the font from rsms.me
+// directly:
+// > How reliable are the fonts served from rsms.me/inter?
+// >
+// > "https://rsms.me/inter/inter.css" and the Inter font files are
+// > distributed globally over CloudFlare’s CDN. This is very reliable
+// > and fast by automatically serving the fonts from a server near your
+// > users, minimizing the latency of your web pages.
 
 \:root
   font-family: Inter, sans-serif
@@ -26,9 +26,9 @@
     font-family: InterVariable, sans-serif
 
 
-/********************/
-/* GENERAL SETTINGS */
-/********************/
+//////////////////////
+// GENERAL SETTINGS //
+//////////////////////
 
 $vp_width: 85%
 
@@ -38,25 +38,25 @@ html
 body
     height: 100vh
 
-    /* Center, fix width
+    // Center, fix width
     margin: auto
     max-width: $vp_width
 
-    /* For the sticky footer:
+    // For the sticky footer:
     display: flex
     flex-direction: column
 
 main
-    /* For the sticky footer:
+    // For the sticky footer:
     flex: 1 0 auto
 
 footer
     text-align: center
-    /* Display the footer as a flex, with two main rows/lines
-    /* N.b. These two lines are div's without class or id
+    // Display the footer as a flex, with two main rows/lines
+    // N.b. These two lines are div's without class or id
     display: flex
     flex-direction: column
-    /* For the sticky footer:
+    // For the sticky footer:
     flex-shrink: 0
 
 .material-resource-div
@@ -72,9 +72,9 @@ footer
     margin: 0 auto
 
 
-/**************************************/
-/* SIZES, MARGINS, PADDING, AND STUFF */
-/**************************************/
+////////////////////////////////////////
+// SIZES, MARGINS, PADDING, AND STUFF //
+////////////////////////////////////////
 
 $material-top-bottom-padding: 16px
 
@@ -86,11 +86,11 @@ $material-top-bottom-padding: 16px
 footer
   margin-top: 80px
 
-/**********/
-/* COLORS */
-/**********/
+////////////
+// COLORS //
+////////////
 
-/* 2-color palette: https://coolors.co/32127a-f9f8f8
+// 2-color palette: https://coolors.co/32127a-f9f8f8
 
 $gradient-4: #32127A
 $gradient-3: #4118A0
@@ -118,9 +118,9 @@ body, html
 footer, footer a
     color: grey
 
-/*****************/
-/* FONT SETTINGS */
-/*****************/
+///////////////////
+// FONT SETTINGS //
+///////////////////
 
 #course-titles h1
   font-weight: 700
@@ -133,16 +133,17 @@ footer, footer a
 #course-titles #course-titles-title
   font-style: italic
 
-/***************/
-/* A FEW NOTES */
-/***************/
+/////////////////
+// A FEW NOTES //
+/////////////////
 
-/* - For sticky footers, see: https://css-tricks.com/couple-takes-sticky-footer/
-/* - For converting CSS to SASS, see: https://css2sass.herokuapp.com/ 
-/* - Documentation for SASS variables: https://sass-lang.com/documentation/variables/
-/* - Careful if you use @import, it is deprecated as of Dart Sass 1.80:
+// - For sticky footers, see: https://css-tricks.com/couple-takes-sticky-footer/
+// - For converting CSS to SASS, see: https://css2sass.herokuapp.com/ 
+// - Documentation for SASS variables: https://sass-lang.com/documentation/variables/
+// - Careful if you use @import, it is deprecated as of Dart Sass 1.80:
          https://sass-lang.com/blog/import-is-deprecated/
-/* - Data attributes in CSS: https://css-tricks.com/a-complete-guide-to-data-attributes/
+// - Data attributes in CSS: https://css-tricks.com/a-complete-guide-to-data-attributes/
+// - SASS hashmaps/dictionnaries: https://sass-lang.com/documentation/values/maps/
 
-/* A few beautiful palettes:
-/* - Persian indigo and Wisteria: https://coolors.co/32127a-bc96e6
+// A few beautiful palettes:
+// - Persian indigo and Wisteria: https://coolors.co/32127a-bc96e6
