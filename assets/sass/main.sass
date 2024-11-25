@@ -60,7 +60,6 @@ footer
     flex-shrink: 0
 
 .material-resource
-    background: red
     width: 100vw
     margin-left: 50%
     transform: translateX(-50%)
@@ -140,10 +139,13 @@ $white: #F9F8F8
 $gray-background: #D9D3D3
 
 body, html
-    background: $white
+  background: $white
 
 .material-resource-title
-    color: $white
+  color: $white
+
+.material-resource-title#all
+  color: black
 
 // For the material resource color, we proceed as follows. There are
 // two main situations:
@@ -179,6 +181,9 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Anales": $gradient-2
       @each $type, $color in $material-colors
         &[data-type=#{$type}]
           background-color: $color
+
+.material-resource
+    background: $gray-background
 
 .material-resource
   // I don't mind a little transition...

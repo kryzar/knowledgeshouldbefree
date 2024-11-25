@@ -55,6 +55,7 @@
                                 (dict "glob" "*-td.*"     "name" "TD")
                                 (dict "glob" "*-anales.*" "name" "Anales")
                                 (dict "glob" "*-misc.*"   "name" "Misc")
+                                (dict "glob" "*-tout.*"   "name" "Tout")
     }}
       {{/* There is only one file per material category (poly, td, etc),
            so one can use GetMatch instead of Match. */}}
@@ -62,7 +63,11 @@
       {{ with $.Resources.GetMatch .glob }}
         <a href='{{ . }}' class='material-resource'
                           data-type='{{ $resource.name }}'>
+        {{ if eq $resource.name "Tout" }}
+          <h1 class='material-resource-title' id='all'>{{ $resource.name }}</h1>
+        {{ else }}
           <h1 class='material-resource-title'>{{ $resource.name }}</h1>
+        {{ end }}
         </a>
       {{ end }}
     {{ end }}
