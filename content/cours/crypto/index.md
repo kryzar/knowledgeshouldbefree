@@ -1,6 +1,6 @@
 ---
 linktitle: Crypto
-Title: Cryptologie, cryptographie algébrique
+title: Cryptologie, cryptographie algébrique
 date: 2021-01-01
 prof: Alain Kraus
 params:

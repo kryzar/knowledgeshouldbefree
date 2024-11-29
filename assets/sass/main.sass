@@ -105,6 +105,16 @@ footer
 footer p
   margin: 0
 
+.course-card h2
+  margin:
+    bottom: 10px
+
+.course-card h3
+  margin:
+    top: 0
+    bottom: 0
+
+
 /////////////////////////////////
 // GRID FOR COURSE DESCRIPTION //
 /////////////////////////////////
@@ -123,6 +133,16 @@ footer p
   > :nth-child(3)
     grid-row: 2
     grid-column: 1
+
+
+///////////////////////////
+// GRID FOR COURSES LIST //
+///////////////////////////
+
+#courses
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: auto auto auto
 
 
 ////////////
@@ -192,8 +212,14 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Annales": $gradient-
   // I don't mind a little transition...
   transition: background-color 0.1s ease
 
-#course-titles h1
+#course-titles h1, #courses h2
   color: $wisteria
+
+.course-card-meta
+  color: gray
+
+.course-card-meta h3
+  color: black
 
 footer, footer a
     color: grey
@@ -203,7 +229,7 @@ footer, footer a
 ///////////////////
 
 #course-titles h1
-  font-weight: 700
+  font-weight: 600
   font-size: 60px
   text-transform: uppercase
 
@@ -215,6 +241,22 @@ footer, footer a
 
 #course-description h1
   font-size: 120%
+
+#courses a
+  text-decoration: none
+
+#courses h2
+  font-size: 42px
+  text-transform: uppercase
+  font-weight: 600
+
+.course-card-meta
+  font-weight: 300
+
+.course-card h3
+  font-size: 100%
+  font-style: italic
+  font-weight: 600
 
 footer
   font-size: 80%

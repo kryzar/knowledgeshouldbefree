@@ -1,7 +1,33 @@
+{{/* So the default behavior for this file
+     (`layouts/_default/home.html`) is to range through all the regular
+     pages of the website. Then, each section has its own range, defined
+     by the default `list.html`. This file also gives access to
+     mywebsite.com/sectionname. In my case, and at the moment, I don't
+     want that, and would rather have a simpler behavior: the "Cours"
+     section is ranged on the index/homepage, and mywebsite.com/cours
+     is a reference to the homepage.
+*/}}
+
 {{ define "main" }}
+
+  <section id='courses'>
+    {{ range (where .Site.Pages "Section" "cours") }}
+       {{ range .Pages }}
+        <a class='course-card' href="{{ .Permalink }}">
+          <h2>{{ .LinkTitle }}</h2>
+          <div class='course-card-meta'>
+            <h3>{{ .Title }}</h3>
+            <div>{{ .Params.Prof }}</div>
+            <div>
+              {{ .Params.Niveau }},
+              {{ .Params.Université }},
+              {{ .Date | dateFormat "2006"}}
+            </div>
+          </div>
+        </a>
+       {{ end }}
+    {{ end }}
+  </section>
+
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
 {{ end }}
