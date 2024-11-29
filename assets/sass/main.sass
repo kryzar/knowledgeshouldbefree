@@ -172,7 +172,6 @@ body, html
 
 // For the material resource color, we proceed as follows. There are
 // two main situations:
-
 // 1. The #material section is NOT being hovered on. In that case, each
 //    material has its own color, given by the hash map $material-colors.
 
@@ -185,32 +184,17 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Annales": $gradient-
 
 // 2. The #material section is YES being hovered on. In that case, we
 //    want the material resource being hovered on to keep its original
-//    color, and the other resources' backgrounds to turn gray. The way
-//    to do so is to act at the #material level. In that order:
-//    [a] Set the background of all children (i.e. .material-resource)
-//        to gray.
-//    [b] AFTER THAT, Set the color of the child being hovered-on to
-//        its original color.
-//
-// One possibility was to play with so-called "siblings selectors", but
-   `~` works only for subsequent siblings.
+//    color, and the other resources' backgrounds to turn gray.
 
-#material
-  &:hover
-    .material-resource
-      background-color: $gray-background
+#material:hover .material-resource:not(:hover)
+  background-color: $gray-background
 
-    .material-resource:hover
-      @each $type, $color in $material-colors
-        &[data-type=#{$type}]
-          background-color: $color
+// Do the same (kinda) for the courses on the index
+#courses:hover a:not(:hover) *
+  color: $gray-background
 
 .material-resource
     background: $gray-background
-
-.material-resource
-  // I don't mind a little transition...
-  transition: background-color 0.1s ease
 
 #course-titles h1, #courses h2
   color: $wisteria
@@ -223,6 +207,15 @@ $material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Annales": $gradient-
 
 footer, footer a
     color: grey
+
+// Transitions
+
+#courses *
+  transition: color 0.1s ease
+
+.material-resource
+  transition: background-color 0.1s ease
+
 
 ///////////////////
 // FONT SETTINGS //
