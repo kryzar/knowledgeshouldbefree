@@ -1,7 +1,7 @@
 ---
-linktitle: Galois
-title: Théorie de Galois
-date: 1998-01-01
+linktitle: Corps locaux
+title: Corps locaux et applications
+date: 2000-01-01
 prof: Alain Kraus
 params:
   niveau: M1 (DEA)
