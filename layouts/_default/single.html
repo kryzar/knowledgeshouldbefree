@@ -95,7 +95,7 @@
 
     {{ range $resource := slice "résumé.md" "niveau.md" "contenu.md" }}
       {{ with $.Resources.GetMatch $resource }}
-        <section class='course-description-item'>
+        <section>
           {{ .Content }}
         </section>
       {{ end }}
