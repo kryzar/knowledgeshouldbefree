@@ -1,5 +1,5 @@
 ---
-linktitle: Arithmétique Algèbre
+linktitle: Arithmétique
 title: Arithmétique et algèbre
 date: 2018-01-01
 params:
