@@ -59,33 +59,9 @@ footer
     // For the sticky footer:
     flex-shrink: 0
 
-.material-resource
-    width: 100vw
-    margin-left: 50%
-    transform: translateX(-50%)
-    display: block
-    text-decoration: none
-
-.material-resource-title
-    width: $vp_width
-    margin: 0 auto
-
-
 ////////////////////////////////////////
 // SIZES, MARGINS, PADDING, AND STUFF //
 ////////////////////////////////////////
-
-$material-top-bottom-padding: 16px
-
-#material
-  margin:
-    bottom: 40px
-    top: 20px
-
-.material-resource
-  padding:
-    bottom: $material-top-bottom-padding
-    top: $material-top-bottom-padding
 
 #course-description
   column-gap: 60px
@@ -165,37 +141,9 @@ $gray-background: #D9D3D3
 body, html
   background: $white
 
-.material-resource-title
-  color: $white
-
-.material-resource-title#all
-  color: black
-
-// For the material resource color, we proceed as follows. There are
-// two main situations:
-// 1. The #material section is NOT being hovered on. In that case, each
-//    material has its own color, given by the hash map $material-colors.
-
-$material-colors: ("Poly": $gradient-4, "TD": $gradient-3, "Annales": $gradient-2, "Misc": $gradient-1)
-
-@each $type, $color in $material-colors
-  .material-resource
-    &[data-type=#{$type}]
-      background-color: $color
-
-// 2. The #material section is YES being hovered on. In that case, we
-//    want the material resource being hovered on to keep its original
-//    color, and the other resources' backgrounds to turn gray.
-
-#material:hover .material-resource:not(:hover)
-  background-color: $gray-background
-
 // Do the same (kinda) for the courses on the index
 #courses:hover a:not(:hover) *
   color: $gray-background
-
-.material-resource
-    background: $gray-background
 
 #course-meta h1, #courses h2
   color: $wisteria
@@ -213,10 +161,6 @@ footer, footer a
 
 #courses *
   transition: color 0.1s ease
-
-.material-resource
-  transition: background-color 0.1s ease
-
 
 ///////////////////
 // FONT SETTINGS //
@@ -258,6 +202,17 @@ footer
 
 footer a
   display: inline
+
+//////////////
+// NEW ORGA //
+//////////////
+
+section#download #download-button
+  background: green
+  width: 100%
+  display: block
+  text-align: center
+  text-decoration: none
 
 /////////////////
 // A FEW NOTES //

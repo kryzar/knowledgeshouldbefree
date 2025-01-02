@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  <section id='course-meta'>
+  <section class='card' id='course-meta'>
     <h1>{{ .LinkTitle }}</h1>
     <h2>
       <span id='course-titles-title'>
@@ -13,64 +13,13 @@
     </h2>
   </section>
 
-  <!-- Download course material -->
+  <section id='download'>
 
-  <section id='material'>
-
-    {{/* Ok so here is how you avoid code duplication here. You have
-         three options here.
-
-       1. Use partial templates. This is the prefered solution
-          according to Haiku and 4o. BUT, it is a pain to transfer
-          variables to the template. Normally, the syntax for a template
-          is:
-
-            {\{  template your_template . }}
-        
-          (Escaping this, otherwise Hugo screams.)
-          But here, we need extra args (glob, name, etc). A solution is
-          to pass the page AND the context. This kinda works, for the
-          price of horrible argument syntax and an extra file. See this:
-
-            https://mertbakir.gitlab.io/hugo/pass-arguments-in-partials-hugo/
-
-      2. Use shortcodes. My understanding is that it's basically the
-         same as templates, but shortcodes are to be used in contents,
-         not in layout definitions. And indeed, I tried to use  a
-         template with
-
-           {\{< my_shortcode >}}
-
-         (Once again escaping.)
-         and Hugo screamed at me because they didn't like the < and >.
-         And indeed:
-
-           https://discourse.gohugo.io/t/highlight-html-unexpected-in-command-built-site-for-language-en/4468
-
-         In any case, I don't really care, as the problems I have with
-         partials, I'd have with shortcodes.
-
-      3. Good ol' loop. Yeah, that's the one. */}}
-
-    {{ range $resource := slice (dict "glob" "*-poly.*"   "name" "Poly")
-                                (dict "glob" "*-td.*"     "name" "TD")
-                                (dict "glob" "*-annales.*" "name" "Annales")
-                                (dict "glob" "*-misc.*"   "name" "Misc")
-                                (dict "glob" "*-tout.*"   "name" "Tout")
-    }}
-      {{/* There is only one file per material category (poly, td, etc),
-           so one can use GetMatch instead of Match. */}}
-
-      {{ with $.Resources.GetMatch .glob }}
-        <a href='{{ . }}' class='material-resource'
-                          data-type='{{ $resource.name }}'>
-        {{ if eq $resource.name "Tout" }}
-          <h1 class='material-resource-title' id='all'>{{ $resource.name }}</h1>
-        {{ else }}
-          <h1 class='material-resource-title'>{{ $resource.name }}</h1>
-        {{ end }}
-        </a>
-      {{ end }}
+    {{/* TODO: Ici, faire un glob plus restrictif. */}}
+    {{ with $.Resources.GetMatch "*.zip" }}
+      <a href='{{ . }}' id='download-button'>
+        Télécharger
+      </a>
     {{ end }}
 
   </section>
