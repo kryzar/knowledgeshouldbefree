@@ -63,8 +63,8 @@ footer
 ////////////////////////////////////////
 
 #course-description
-  column-gap: 60px
-  row-gap: 40px
+  column-gap: 20px
+  row-gap: 20px
 
 footer
   margin:
@@ -147,12 +147,6 @@ footer, footer a
   font-size: 60px
   text-transform: uppercase
 
-#course-meta h2
-  font-weight: 200
-
-#course-meta #course-titles-title
-  font-style: italic
-
 #course-description h1
   font-size: 120%
 
@@ -179,7 +173,7 @@ footer a
 //////////////
 
 a#download
-  background: #0496FF
+  background: #058ED9
   width: 100%
   display: flex
   align-items: center
@@ -220,22 +214,29 @@ h1#title
   color: #061A40
   font-size: 30px
   font-weight: 600
-
-section#meta-download
-  display: flex
-  flex-direction: horizontal
-  align-items: center
   margin:
-    bottom: 1cm
+    bottom: 10px
 
-section#meta-download a#download
-  width: 7cm
+a#download
   color: white
-
-section#meta-download #meta
-  color: gray
+  font-weight: 700
+  margin: auto
+  display: flex
+  items-align: center
+  justify-content: space-around
   margin:
-    left: 0.6cm
+    bottom: 0.8cm
+    top: 0.8cm
+
+section#meta
+  color: gray
+  font-weight: 300
+
+section#course-description section
+  background: #F7F7F7
+  padding:
+    left: 0.5cm
+    right: 0.5cm
 
 /////////////////
 // A FEW NOTES //
@@ -251,6 +252,7 @@ section#meta-download #meta
 
 // A few beautiful palettes:
 // - Persian indigo and Wisteria: https://coolors.co/32127a-bc96e6
+// - https://coolors.co/ffffff-f7f7f7-061a40-ed254e
 
 
 #about

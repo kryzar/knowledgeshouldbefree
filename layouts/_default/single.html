@@ -4,23 +4,20 @@
       {{ .Title }}
   </h1>
 
-  <section id='meta-download'>
-
-    {{/* TODO: Ici, faire un glob plus restrictif. */}}
-    {{ with $.Resources.GetMatch "*.zip" }}
-      <a href='{{ . }}' id='download'>
-        Télécharger l'archive du cours
-      </a>
-    {{ end }}
-
-    <section id='meta'>
-      {{ .Params.Prof }} ⋅
-      {{ .Params.Niveau }} ⋅
-      {{ .Params.Université }} ⋅
-      {{ .Date | dateFormat "2006"}}
-    </section>
-
+  <section id='meta'>
+    {{ .Params.Prof }} ⋅
+    {{ .Params.Niveau }} ⋅
+    {{ .Params.Université }} ⋅
+    {{ .Date | dateFormat "2006"}}
   </section>
+
+  {{/* TODO: Ici, faire un glob plus restrictif. */}}
+  {{ with $.Resources.GetMatch "*.zip" }}
+    <a href='{{ . }}' id='download'>
+      Télécharger l'archive du cours
+    </a>
+  {{ end }}
+
 
   <section id='course-description'>
 
