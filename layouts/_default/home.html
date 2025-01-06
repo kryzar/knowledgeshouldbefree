@@ -16,12 +16,10 @@
         <a class='course-card' href="{{ .Permalink }}">
           <h1>{{ .Title }}</h1>
           <div class='course-card-meta'>
-            <div>
-              {{ .Params.Prof }} ⋅
-              {{ .Params.Niveau }} ⋅
-              {{ .Params.Université }} ⋅
-              {{ .Date | dateFormat "2006"}}
-            </div>
+            {{ .Params.Prof }} ⋅
+            {{ .Params.Niveau }} ⋅
+            {{ .Params.Université }} ⋅
+            {{ .Date | dateFormat "2006"}}
           </div>
         </a>
        {{ end }}
