@@ -12,17 +12,17 @@
 
   <section id='courses'>
     {{ range (where .Site.Pages "Section" "cours") }}
-       {{ range .Pages }}
-        <a class='course-card' href="{{ .Permalink }}">
-          <h1>{{ .Title }}</h1>
-          <div class='course-card-meta'>
-            {{ .Params.Prof }} ⋅
-            {{ .Params.Niveau }} ⋅
-            {{ .Params.Université }} ⋅
-            {{ .Date | dateFormat "2006"}}
-          </div>
-        </a>
-       {{ end }}
+     {{ range .Pages }}
+      <a class='course-card' href="{{ .Permalink }}">
+        <h1>{{ .Title }}</h1>
+        <section class='course-card-meta'>
+          {{ .Params.Prof }} ⋅
+          {{ .Params.Niveau }} ⋅
+          {{ .Params.Université }} ⋅
+          {{ .Date | dateFormat "2006"}}
+        </section>
+      </a>
+     {{ end }}
     {{ end }}
   </section>
 
