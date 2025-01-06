@@ -81,15 +81,9 @@ footer
 footer p
   margin: 0
 
-.course-card h2
+.course-card h1
   margin:
     bottom: 10px
-
-.course-card h3
-  margin:
-    top: 0
-    bottom: 0
-
 
 /////////////////////////////////
 // GRID FOR COURSE DESCRIPTION //
@@ -109,17 +103,6 @@ footer p
   > :nth-child(3)
     grid-row: 2
     grid-column: 1
-
-
-///////////////////////////
-// GRID FOR COURSES LIST //
-///////////////////////////
-
-#courses
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: auto auto
-
 
 ////////////
 // COLORS //
@@ -145,7 +128,7 @@ body, html
 #courses:hover a:not(:hover) *
   color: $gray-background
 
-#course-meta h1, #courses h2
+#course-meta h1, #courses h1
   color: $wisteria
 
 .course-card-meta
@@ -183,7 +166,7 @@ footer, footer a
 #courses a
   text-decoration: none
 
-#courses h2
+#courses h1
   font-size: 34px
   text-transform: uppercase
   font-weight: 600
