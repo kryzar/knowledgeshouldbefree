@@ -30,7 +30,7 @@
 // GENERAL SETTINGS //
 //////////////////////
 
-$vp_width: 85%
+$vp_width: 90%
 
 html
     height: 100vh
@@ -128,7 +128,7 @@ body, html
 #courses:hover a:not(:hover) *
   color: $gray-background
 
-#course-meta h1, #courses h1
+#course-meta h1
   color: $wisteria
 
 .course-card-meta
@@ -166,10 +166,6 @@ footer, footer a
 #courses a
   text-decoration: none
 
-#courses h1
-  font-size: 34px
-  font-weight: 700
-
 .course-card-meta
   font-weight: 300
 
@@ -197,21 +193,33 @@ section#download #download-button
   text-decoration: none
 
 section#courses
+  border:
+    radius: 0.2cm
+  margin:
+    top: 1cm
+  background: #FEF8F8
+  // box-shadow: -23px -23px 45px rgba(255, 255, 255, 1), 28px 28px 50px rgba(128, 128, 128, 0.16);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
 html, body
   background: #FAE3E3
 
-.course-card
+section#courses .course-card
   display: block
-  background: white
-  border:
-    radius: 0.2cm
   padding:
-    left: 0.3cm
-    right: 0.3cm
-    bottom: 0.2cm
-  box-shadow: 28px 28px 50px rgba(128, 128, 128, 0.16);
-  box-shadow: -23px -23px 45px rgba(255, 255, 255, 1);
+    left: 0.4cm
+    right: 0.4cm
+    bottom: 0.3cm
+    top: 0.05cm
+
+section#courses .course-card h1
+  color: #473198
+  font-size: 30px
+  font-weight: 600
+
+section#courses .course-card:not(:first-child)
+  border:
+    top: 2px solid #FAE3E3
 
 /////////////////
 // A FEW NOTES //
