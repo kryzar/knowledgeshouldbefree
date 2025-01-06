@@ -1,26 +1,24 @@
 {{ define "main" }}
 
-  <section class='card' id='course-meta'>
-    <h1>{{ .LinkTitle }}</h1>
-    <h2>
-      <span id='course-titles-title'>
-        {{ .Title }}
-      </span>·
-      {{ .Params.Prof }},
-      {{ .Params.Université }},
-      {{ .Params.Niveau }},
-      {{ .Date | dateFormat "2006"}}
-    </h2>
-  </section>
+  <h1 id='title'>
+      {{ .Title }}
+  </h1>
 
-  <section id='download'>
+  <section id='meta-download'>
 
     {{/* TODO: Ici, faire un glob plus restrictif. */}}
     {{ with $.Resources.GetMatch "*.zip" }}
-      <a href='{{ . }}' id='download-button'>
-        Télécharger
+      <a href='{{ . }}' id='download'>
+        Télécharger l'archive du cours
       </a>
     {{ end }}
+
+    <section id='meta'>
+      {{ .Params.Prof }} ⋅
+      {{ .Params.Niveau }} ⋅
+      {{ .Params.Université }} ⋅
+      {{ .Date | dateFormat "2006"}}
+    </section>
 
   </section>
 

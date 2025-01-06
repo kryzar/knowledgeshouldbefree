@@ -18,13 +18,12 @@
 // > users, minimizing the latency of your web pages.
 
 \:root
-  font-family: Inter, sans-serif
+  font-family: InterVariable, sans-serif
   font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'frac' 1, 'cv10' 1
 
 @supports (font-variation-settings: normal)
   \:root
     font-family: InterVariable, sans-serif
-
 
 //////////////////////
 // GENERAL SETTINGS //
@@ -179,12 +178,16 @@ footer a
 // NEW ORGA //
 //////////////
 
-section#download #download-button
-  background: green
+a#download
+  background: #0496FF
   width: 100%
-  display: block
+  display: flex
+  align-items: center
   text-align: center
   text-decoration: none
+  justify-content: space-around
+  border-radius: 6px
+  height: 0.8cm
 
 section#courses
   border:
@@ -212,6 +215,27 @@ section#courses .course-card h1
 section#courses .course-card:not(:first-child)
   margin:
     top: 0.4cm
+
+h1#title
+  color: #061A40
+  font-size: 30px
+  font-weight: 600
+
+section#meta-download
+  display: flex
+  flex-direction: horizontal
+  align-items: center
+  margin:
+    bottom: 1cm
+
+section#meta-download a#download
+  width: 7cm
+  color: white
+
+section#meta-download #meta
+  color: gray
+  margin:
+    left: 0.6cm
 
 /////////////////
 // A FEW NOTES //
