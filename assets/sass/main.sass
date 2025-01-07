@@ -107,31 +107,23 @@ footer p
 // COLORS //
 ////////////
 
-// 2-color palette: https://coolors.co/32127a-f9f8f8
-
-$gradient-4: #32127A
-$gradient-3: #4118A0
-$gradient-2: #4F1DC3
-$gradient-1: #602ADF
-
-$wisteria: #BC96E6
-
-$white: #F9F8F8
-$gray: #837272
-$gray-background: #D9D3D3
+$lightgray: #f7f7f7
+$black: #061a40
+$red: #ed254e
+$blue: #058ed9
 
 body, html
-  background: $white
+  background: white
 
 // Do the same (kinda) for the courses on the index
 #courses:hover a:not(:hover) *
-  color: $gray-background
+  color: gray
 
 .course-card-meta
-  color: $gray
+  color: gray
 
 footer, footer a
-  color: $gray
+  color: gray
 
 // Transitions
 
@@ -173,7 +165,7 @@ footer a
 //////////////
 
 a#download
-  background: #058ED9
+  background: $blue
   width: 100%
   display: flex
   align-items: center
@@ -194,7 +186,7 @@ html, body
 
 section#courses .course-card
   display: block
-  background: #F7F7F7
+  background: $lightgray
   padding:
     left: 0.4cm
     right: 0.4cm
@@ -202,7 +194,7 @@ section#courses .course-card
     top: 0.05cm
 
 section#courses .course-card h1
-  color: #061A40
+  color: $black
   font-size: 30px
   font-weight: 600
 
@@ -211,7 +203,7 @@ section#courses .course-card:not(:first-child)
     top: 0.4cm
 
 h1#title
-  color: #061A40
+  color: $black
   font-size: 30px
   font-weight: 600
   margin:
@@ -233,10 +225,13 @@ section#meta
   font-weight: 300
 
 section#course-description section
-  background: #F7F7F7
+  background: $lightgray
   padding:
     left: 0.5cm
     right: 0.5cm
+
+body
+  color: $black
 
 /////////////////
 // A FEW NOTES //
@@ -257,6 +252,6 @@ section#course-description section
 
 #about
   margin-top: 2cm
-  color: $gray
+  color: gray
   font-weight: 300
   
