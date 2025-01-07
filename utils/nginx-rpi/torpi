@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd ../../
+hugo
+rsync -r public/ pi:/var/www/knowledge
+
+# This works because I ran this (once, a long time ago):
+#   sudo chown -R pi  /var/www/knowledge/
+#   sudo chmod -R 755 /var/www/knowledge/

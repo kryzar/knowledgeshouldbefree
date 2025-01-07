@@ -1,0 +1,12 @@
+# /etc/nginx/sites-available, which is simlinked to /etc/nginx/sites-enabled
+
+server {
+    listen 8080;
+    server_name _;
+    root /var/www/knowledge;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
