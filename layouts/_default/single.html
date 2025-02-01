@@ -41,7 +41,7 @@
          `nth-child` CSS selector.
     */}}
 
-    {{ range $resource := slice "résumé.md" "niveau.md" "contenu.md" }}
+    {{ range $resource := slice "résumé.md" "prérequis.md" "contenu.md" }}
       {{ with $.Resources.GetMatch $resource }}
         <section>
           {{ .Content }}
