@@ -10,8 +10,8 @@ chapitres :
 5. Fonctions continues
 6. Fonctions dérivables
 7. Intégrale de Riemann
-8. Arithmétique sur Z
-9. Arithmétique sur K[X]
+8. Arithmétique sur $\mathbb Z$
+9. Arithmétique sur $K[X]$
 10. Géométrie affine
 11. Géométrie euclidienne plane
 12. Équations différentielles

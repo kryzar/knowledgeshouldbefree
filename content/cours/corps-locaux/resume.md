@@ -2,11 +2,12 @@
 
 Cours accéléré de niveau M2 donné en 2000. Il est divisé en huit chapitres et
 trois appendices. Les corps locaux sont des corps complets pour une valuation
-discrète. Par exemple, p étant un nombre premier, le corps Qp qui est le
-complété de Q pour la valuation (ou la valeur absolue) p-adique sur Q, est un
-corps local. Il en est de même des extensions finies de Qp . L'objectif de ce
-cours est de présenter une introduction la théorie des corps locaux et d'en
-donner quelques applications Diophantiennes.
+discrète. Par exemple, $p$ étant un nombre premier, le corps $\mathbb Q_p$ qui
+est le complété de $\mathbb Q$ pour la valuation (ou la valeur absolue)
+$p$-adique sur $\mathbb Q$, est un corps local. Il en est de même des
+extensions finies de $\mathbb Q_p$ . L'objectif de ce cours est de présenter
+une introduction la théorie des corps locaux et d'en donner quelques
+applications Diophantiennes.
 
 1. Anneaux de valuation discrète
 2. Anneaux de Dedekind

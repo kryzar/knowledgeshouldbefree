@@ -1,0 +1,21 @@
+{{/* 
+     Source: https://gohugo.io/content-management/mathematics/#step-2
+
+     Btw, I checked that the URL provided by the Hugo doc is the same as the
+     one provided by the Mathjax doc:
+
+         https://www.mathjax.org/#gettingstarted
+*/}}
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['$$', '$$']],  // block
+      inlineMath:  [['$', '$']]     // inline
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
