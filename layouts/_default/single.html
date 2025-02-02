@@ -50,4 +50,9 @@
     {{ end }}
   </section>
 
+  <section id='index-link'>
+    <a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a>
+    <p id="help">Cliquer pour revenir à l'accueil</p>
+  </section>
+
 {{ end }}
