@@ -66,15 +66,30 @@ footer p
   grid-template-columns: 1fr 1fr // Two equal columns
   grid-template-rows: auto auto  // Two rows with auto height
 
+  // PREVIOUS LAYOUT:
+  //   // First two divs go in the first row
+  //   > :nth-child(1),
+  //   > :nth-child(2)
+  //     grid-row: 1
+
+  //   // Third div goes in second row, first column
+  //   > :nth-child(3)
+  //     grid-row: 2
+  //     grid-column: 1
+
   // First two divs go in the first row
-  > :nth-child(1),
-  > :nth-child(2)
-    grid-row: 1
+  > :nth-child(1)
+    grid-row-start: 1
+    grid-row-end:   span 2
 
   // Third div goes in second row, first column
+  > :nth-child(2)
+    grid-row: 1
+    grid-column: 2
+
   > :nth-child(3)
     grid-row: 2
-    grid-column: 1
+    grid-column: 2
 
 ////////////
 // COLORS //
