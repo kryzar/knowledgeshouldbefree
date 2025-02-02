@@ -91,27 +91,33 @@ footer p
     grid-row: 2
     grid-column: 2
 
-////////////
-// COLORS //
-////////////
+/////////////
+// PALETTE //
+/////////////
 
+$white:     #ffffff
 $lightgray: #f7f7f7
-$black: #061a40
-$red: #ed254e
-$blue: #058ed9
+$gray:      #7F899C
+$black:     #061a40
+
+// https://coolors.co/ffffff-f7f7f7-7f899c-061a40
+
+// Previously used colors that go well with this palette:
+//   $red: #ed254e
+//   $blue: #058ed9
 
 body, html
-  background: white
+  background: $white
 
 // Do the same (kinda) for the courses on the index
 #courses:hover a:not(:hover) *
-  color: gray
+  color: $gray
 
 .course-card-meta
-  color: gray
+  color: $gray
 
 footer, footer a
-  color: gray
+  color: $gray
 
 // Transitions
 
@@ -158,9 +164,6 @@ section#courses
   margin:
     top: 1cm
 
-html, body
-  background: white
-
 section#courses .course-card
   display: block
   background: $lightgray
@@ -188,7 +191,7 @@ h1#title
     bottom: 0.3cm
 
 section#meta
-  color: gray
+  color: $gray
   font-weight: 300
 
 section#meta-download
@@ -210,7 +213,7 @@ a#download
   height: 0.8cm
   align-items: center
   background: $black
-  color: white
+  color: $white
 
 section#course-description section
   background: $lightgray
