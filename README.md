@@ -1,4 +1,4 @@
-# README
+# Knowledge should be free
 
 ## Pour les développeurs et développeuses
 
