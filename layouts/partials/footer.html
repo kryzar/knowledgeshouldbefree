@@ -1,3 +1,8 @@
+{{ if not .IsHome }}
+  <section id='index-link'>
+    <a href="{{ .Site.BaseURL | relLangURL }}">Retourner à l'accueil</a>
+  </section>
+{{ end }}
 <p>
   {{ .Site.Title }}. {{ .Site.Copyright | markdownify }}
 </p>
