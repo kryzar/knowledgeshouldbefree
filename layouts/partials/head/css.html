@@ -9,6 +9,9 @@
 
 <link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+{{- with resources.Get "css/inter-font.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
 
 <!-- And regular stylesheets below -->
 

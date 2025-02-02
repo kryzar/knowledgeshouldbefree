@@ -1,0 +1,28 @@
+/*
+  The font (Inter) is free and open source. The following import
+  snippet was freely taken from their website https://rsms.me/inter/.
+ 
+  Note that the font has features, to be enabled with
+  `font-feature-settings`: https://rsms.me/inter/#faq-using-features.
+ 
+  Btw, as per the website, it is reliable to import the font from rsms.me
+  directly:
+  > How reliable are the fonts served from rsms.me/inter?
+  >
+  > "https://rsms.me/inter/inter.css" and the Inter font files are
+  > distributed globally over CloudFlare’s CDN. This is very reliable
+  > and fast by automatically serving the fonts from a server near your
+  > users, minimizing the latency of your web pages.
+*/
+
+:root {
+  font-family: InterVariable, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'cv10' 1;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
