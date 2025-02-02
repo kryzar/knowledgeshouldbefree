@@ -3,7 +3,7 @@
 Cours de préparation au Capes interne donné en 2010/11. Il est divisé en douze
 chapitres :
 
-1. Prélimaires d’analyse
+1. Prélimaires d'analyse
 2. Suites numériques
 3. Séries numériques
 4. Nombres complexes
