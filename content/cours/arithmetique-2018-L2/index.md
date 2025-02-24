@@ -1,6 +1,6 @@
 ---
 linktitle: Arithmétique
-title: Arithmétique et algèbre
+title: Arithmétique et algèbre (L2)
 date: 2018-01-01
 params:
   prof: Alain Kraus

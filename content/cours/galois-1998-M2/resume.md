@@ -11,3 +11,8 @@ certaines notions topologiques qui interviennent dans ce cours.
 4. Théorie des revêtements d'un espace topologique
 5. Théorie de Galois des revêtements
 6. Notions topologiques préliminaires
+
+Nous incluons aussi des feuilles d'exercices et des devoirs, tous corrigés et
+de niveau M1, qui portent sur des sujets allant de la théorie de Galois et de
+l'algèbre commutative, à la géométrique algébrique. Ces exercices ont été
+utilisés dans divers cours qui se sont déroulés au début des années 2000.

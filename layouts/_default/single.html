@@ -14,7 +14,7 @@
     </section>
 
     {{/* TODO: Ici, faire un glob plus restrictif. */}}
-    {{ with $.Resources.GetMatch "*.zip" }}
+    {{ with .Resources.GetMatch "archive.zip" }}
       <a href='{{ . }}' id='download'>
         Télécharger le cours
       </a>
