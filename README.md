@@ -10,9 +10,9 @@ coût annuel de ces deux services est de respectivement 35,40 USD et 15 €, soi
 environ 48,80 €.
 
 Ayant conscience de l'importance primordiale de la protection des données de
-nos étudiantes et étudiants, j'aimerais à terme faire héberger le site par une
-institution académique française. Toute proposition en accord avec les valeurs
-dont ce site se réclame sera étudiée sérieusement.
+nos étudiantes et étudiants, nous aimerions à terme faire héberger le site par
+une institution académique française. Toute proposition en accord avec les
+valeurs dont ce site se réclame sera étudiée sérieusement.
 
 Aucune collecte de la moindre donnée n'est nécessaire, et ne sera effectuée. En
 particulier, aucun mécanisme de collecte ne sera utilisé ou implémenté.
