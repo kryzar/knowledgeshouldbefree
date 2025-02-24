@@ -3,11 +3,11 @@
 ## Hébergement et confidentialité
 
 Le site est pour l'instant hébergé par l'hébergeur islandais
-[1984.hosting](https://1984.hosting/), que j'ai choisi pour sa bonne réputation
-en matière de confidentialité et respect des données, ainsi que sa simplicité.
-Le nom de domaine est loué par l'intermédiaire de [Njalla](https://njal.la/).
-Le coût annuel de ces deux services est de respectivement 35,40 USD et 15 €,
-soit environ 48,80 €.
+[1984.hosting](https://1984.hosting/), choisi pour sa bonne réputation en
+matière de confidentialité et respect des données, ainsi que sa simplicité. Le
+nom de domaine est loué par l'intermédiaire de [Njalla](https://njal.la/). Le
+coût annuel de ces deux services est de respectivement 35,40 USD et 15 €, soit
+environ 48,80 €.
 
 Ayant conscience de l'importance primordiale de la protection des données de
 nos étudiantes et étudiants, j'aimerais à terme faire héberger le site par une
