@@ -6,7 +6,7 @@ eu lieu en 2004/05. Ces notes sont divisées en deux parties.
 
 L’objectif principal de la première partie était de démontrer, sous forme
 d’exercices, le théorème de Kummer sur l’équation de Fermat, autrement dit que
-si p est un nombre premier régulier, l’équation $x^p + y^p + z^p = 0$ n’a pas
+si $p$ est un nombre premier régulier, l’équation $x^p + y^p + z^p = 0$ n’a pas
 de solutions non triviales ($xyz ≠ 0$) dans le corps cyclotomique engendré par
 les racines $p$-ièmes de l’unité.
 
