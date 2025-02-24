@@ -17,7 +17,8 @@ répertoire du dépôt, et exécuter :
 hugo server
 ```
 
-Parmi les lignes renvoyées par Hugo, et en cas de succès, les lignes importantes sont :
+Parmi les lignes renvoyées par Hugo, et en cas de succès, nous trouvons les
+informations importantes suivantes :
 
 ```
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
