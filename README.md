@@ -11,7 +11,7 @@ soit environ 48,80 €.
 
 Ayant conscience de l'importance primordiale de la protection des données de
 nos étudiantes et étudiants, j'aimerais à terme faire héberger le site par une
-institutions académique française. Toute proposition en accord avec les valeurs
+institution académique française. Toute proposition en accord avec les valeurs
 dont ce site se réclame sera étudiée sérieusement.
 
 Aucune collecte de la moindre donnée n'est nécessaire, et ne sera effectuée. En
