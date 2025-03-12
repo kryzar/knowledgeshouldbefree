@@ -1,3 +1,3 @@
 # Contenu
 
-- Le chapitre uniquement.
+- Les notes de ce chapitre.

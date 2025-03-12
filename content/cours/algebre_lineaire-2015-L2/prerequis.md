@@ -1,3 +1,3 @@
 # Prérequis
 
-Connaissances niveau Bac S.
+Connaissances de L1.

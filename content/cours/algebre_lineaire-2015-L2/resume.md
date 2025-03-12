@@ -9,4 +9,4 @@ commencé par les matrices à coefficients dans un corps.
 1. Matrices à coefficients dans un corps
 2. Espaces vectoriels — Applications linéaires
 3. Déterminants
-4. Réduction des endomorphismes.
+4. Réduction des endomorphismes

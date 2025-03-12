@@ -1,3 +1,3 @@
 # Contenu
 
-- Le polycopié du cours uniquement.
+- Le polycopié du cours.
