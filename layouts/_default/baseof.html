@@ -3,7 +3,8 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body>
+<body class="{{ if .IsHome }}index{{ else if .IsPage }}single{{ end }}">
+
   <header>
     {{ partial "header.html" . }}
   </header>

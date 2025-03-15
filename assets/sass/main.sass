@@ -88,153 +88,157 @@ footer, footer a
 //// INDEX ONLY ////
 ////////////////////
 
-#courses
-  border:
-    radius: 0.2cm
-  margin:
-    top: 1cm
+body.index
 
-// Animation and hover
-#courses:hover a:not(:hover) *
-  color: $gray
+  #courses
+    border:
+      radius: 0.2cm
+    margin:
+      top: 1cm
 
-#courses *
-  transition: color 0.1s ease
+  // Animation and hover
+  #courses:hover a:not(:hover) *
+    color: $gray
 
-#courses a
-  text-decoration: none
+  #courses *
+    transition: color 0.1s ease
 
-#courses .course
-  display: block
-  background: $lightgray
-  padding:
-    left: 0.4cm
-    right: 0.4cm
-    bottom: 0.3cm
-    top: 0.05cm
+  #courses a
+    text-decoration: none
 
-#courses .course h1
-  margin:
-    bottom: 10px
+  #courses .course
+    display: block
+    background: $lightgray
+    padding:
+      left: 0.4cm
+      right: 0.4cm
+      bottom: 0.3cm
+      top: 0.05cm
 
-  font-size: 30px
-  font-weight: 600
+  #courses .course h1
+    margin:
+      bottom: 10px
 
-// Space on top except on the first course
-#courses .course:not(:first-child)
-  margin:
-    top: 0.4cm
+    font-size: 30px
+    font-weight: 600
 
-// Thin font for course info
-#courses .course .meta
-  color: $gray
+  // Space on top except on the first course
+  #courses .course:not(:first-child)
+    margin:
+      top: 0.4cm
 
-  font-weight: 300
+  // Thin font for course info
+  #courses .course .meta
+    color: $gray
 
-#about
-  color: $black
-  font-size: 90%
-  font-weight: 300
-  margin-top: 1cm
-  padding:
-    top:    0.2cm
-    left:   0.4cm
-    right:  0.4cm
-    bottom: 0.4cm
+    font-weight: 300
+
+  #about
+    color: $black
+    font-size: 90%
+    font-weight: 300
+    margin-top: 1cm
+    padding:
+      top:    0.2cm
+      left:   0.4cm
+      right:  0.4cm
+      bottom: 0.4cm
 
 
 ///////////////////////////
 //// COURSE PAGES ONLY ////
 ///////////////////////////
 
-h1#title
-  color: $black
-  font-size: 34px
-  font-weight: 700
-  margin:
-    top: 1cm
-    bottom: 0.2cm
+body.single
 
-section#meta-download section#meta
-  color: $gray
-  font-weight: 300
+  h1#title
+    color: $black
+    font-size: 34px
+    font-weight: 700
+    margin:
+      top: 1cm
+      bottom: 0.2cm
 
-section#meta-download
-  display: flex
-  justify-content: space-between
-  flex-direction: horizontal
-  align-items: flex-end
-  margin:
-    bottom: 1.5cm
+  section#meta-download section#meta
+    color: $gray
+    font-weight: 300
 
-section#course-description
+  section#meta-download
+    display: flex
+    justify-content: space-between
+    flex-direction: horizontal
+    align-items: flex-end
+    margin:
+      bottom: 1.5cm
 
-  // GRID DISPLAY
+  section#course-description
 
-  display: grid
-  grid-template-columns: 1fr 1fr // Two equal columns
-  grid-template-rows: auto auto  // Two rows with auto height
+    // GRID DISPLAY
 
-  // First two divs go in the first row
-  > :nth-child(1)
-    grid-row-start: 1
-    grid-row-end:   span 2
+    display: grid
+    grid-template-columns: 1fr 1fr // Two equal columns
+    grid-template-rows: auto auto  // Two rows with auto height
 
-  // Third div goes in second row, first column
-  > :nth-child(2)
-    grid-row: 1
-    grid-column: 2
+    // First two divs go in the first row
+    > :nth-child(1)
+      grid-row-start: 1
+      grid-row-end:   span 2
 
-  > :nth-child(3)
-    grid-row: 2
-    grid-column: 2
+    // Third div goes in second row, first column
+    > :nth-child(2)
+      grid-row: 1
+      grid-column: 2
 
-  column-gap: 20px
-  row-gap:    20px
+    > :nth-child(3)
+      grid-row: 2
+      grid-column: 2
 
-  // PREVIOUS LAYOUT:
-  //   // First two divs go in the first row
-  //   > :nth-child(1),
-  //   > :nth-child(2)
-  //     grid-row: 1
+    column-gap: 20px
+    row-gap:    20px
 
-  //   // Third div goes in second row, first column
-  //   > :nth-child(3)
-  //     grid-row: 2
-  //     grid-column: 1
+    // PREVIOUS LAYOUT:
+    //   // First two divs go in the first row
+    //   > :nth-child(1),
+    //   > :nth-child(2)
+    //     grid-row: 1
 
-section#course-description h1
-  font-size: 120%
+    //   // Third div goes in second row, first column
+    //   > :nth-child(3)
+    //     grid-row: 2
+    //     grid-column: 1
 
-// These are Résumé, Prérequis, and Contenu.
-// TODO: Find a better selector than just `section`.
-section#course-description section
-  background: $lightgray
-  padding:
-    top:    0.2cm
-    left:   0.4cm
-    right:  0.4cm
-    bottom: 0.4cm
+  section#course-description h1
+    font-size: 120%
 
-// BUTTONS
+  // These are Résumé, Prérequis, and Contenu.
+  // TODO: Find a better selector than just `section`.
+  section#course-description section
+    background: $lightgray
+    padding:
+      top:    0.2cm
+      left:   0.4cm
+      right:  0.4cm
+      bottom: 0.4cm
 
-a#download, #goback-index a
-  display: flex
-  font-weight: 600
-  justify-content: space-around
-  text-decoration: none
-  padding:
-    left: 0.4cm
-    right: 0.4cm
-  height: 0.8cm
-  align-items: center
-  background: $black
-  color: $white
+  // BUTTONS
 
-#goback-index a
-  font-size: 120%
-  margin:
-    bottom: 0.4cm
+  a#download, #goback-index a
+    display: flex
+    font-weight: 600
+    justify-content: space-around
+    text-decoration: none
+    padding:
+      left: 0.4cm
+      right: 0.4cm
+    height: 0.8cm
+    align-items: center
+    background: $black
+    color: $white
+
+  #goback-index a
+    font-size: 120%
+    margin:
+      bottom: 0.4cm
 
 
 /////////////////////
