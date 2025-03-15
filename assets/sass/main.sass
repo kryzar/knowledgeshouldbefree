@@ -84,10 +84,6 @@ footer, footer a
 // SIZES, MARGINS, PADDING, AND STUFF //
 ////////////////////////////////////////
 
-#course-description
-  column-gap: 20px
-  row-gap:    20px
-
 .course h1
   margin:
     bottom: 10px
@@ -96,35 +92,6 @@ footer, footer a
 // GRID FOR COURSE DESCRIPTION //
 /////////////////////////////////
 
-#course-description
-  display: grid
-  grid-template-columns: 1fr 1fr // Two equal columns
-  grid-template-rows: auto auto  // Two rows with auto height
-
-  // PREVIOUS LAYOUT:
-  //   // First two divs go in the first row
-  //   > :nth-child(1),
-  //   > :nth-child(2)
-  //     grid-row: 1
-
-  //   // Third div goes in second row, first column
-  //   > :nth-child(3)
-  //     grid-row: 2
-  //     grid-column: 1
-
-  // First two divs go in the first row
-  > :nth-child(1)
-    grid-row-start: 1
-    grid-row-end:   span 2
-
-  // Third div goes in second row, first column
-  > :nth-child(2)
-    grid-row: 1
-    grid-column: 2
-
-  > :nth-child(3)
-    grid-row: 2
-    grid-column: 2
 
 body, html
   background: $white
@@ -149,9 +116,6 @@ body, html
   font-weight: 600
   font-size: 60px
   text-transform: uppercase
-
-#course-description h1
-  font-size: 120%
 
 #courses a
   text-decoration: none
@@ -230,14 +194,6 @@ a#download, #index-link a
   margin:
     bottom: 0.4cm
 
-section#course-description section
-  background: $lightgray
-  padding:
-    top:    0.2cm
-    left:   0.4cm
-    right:  0.4cm
-    bottom: 0.4cm
-
 
 ///////////////////
 //// INDEX ONLY ////
@@ -258,6 +214,56 @@ section#course-description section
 ///////////////////////////
 //// COURSE PAGES ONLY ////
 ///////////////////////////
+
+section#course-description
+
+  // GRID DISPLAY
+
+  display: grid
+  grid-template-columns: 1fr 1fr // Two equal columns
+  grid-template-rows: auto auto  // Two rows with auto height
+
+  // First two divs go in the first row
+  > :nth-child(1)
+    grid-row-start: 1
+    grid-row-end:   span 2
+
+  // Third div goes in second row, first column
+  > :nth-child(2)
+    grid-row: 1
+    grid-column: 2
+
+  > :nth-child(3)
+    grid-row: 2
+    grid-column: 2
+
+  column-gap: 20px
+  row-gap:    20px
+
+  // PREVIOUS LAYOUT:
+  //   // First two divs go in the first row
+  //   > :nth-child(1),
+  //   > :nth-child(2)
+  //     grid-row: 1
+
+  //   // Third div goes in second row, first column
+  //   > :nth-child(3)
+  //     grid-row: 2
+  //     grid-column: 1
+
+
+section#course-description h1
+  font-size: 120%
+
+// These are Résumé, Prérequis, and Contenu.
+// TODO: Find a better selector than just `section`.
+section#course-description section
+  background: $lightgray
+  padding:
+    top:    0.2cm
+    left:   0.4cm
+    right:  0.4cm
+    bottom: 0.4cm
 
 
 /////////////////////
