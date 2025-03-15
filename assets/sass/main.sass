@@ -40,64 +40,56 @@ $black:     #061a40
 // GENERAL SETTINGS //
 //////////////////////
 
-html
-  height: 100vh
-
 body
-  height: 100vh
-
-  // Center, fix width
-  margin: auto
-  max-width: $vp_width
-
-  // For the sticky footer:
-  display: flex
-  flex-direction: column
-
-  // COLORS
-
-  color: $black
+    // For the sticky footer:
+    display: flex
+    flex-direction: column
+    margin: auto
+    max-width: $vp_width
+    color: $black
 
 body, html
-  background: $white
+    height: 100vh
+    background: $white
 
 main
-  // For the sticky footer:
-  flex: 1 0 auto
+    // For the sticky footer:
+    flex: 1 0 auto
 
 a
-  color: $black
+    color: $black
 
 footer
-  text-align: center
-  // Display the footer as a flex, with two main rows/lines
-  // N.b. These two lines are div's without class or id
-  display: flex
-  flex-direction: column
-  // For the sticky footer:
-  flex-shrink: 0
+    text-align: center
+    // Display the footer as a flex, with two main rows/lines
+    // N.b. These two lines are div's without class or id
+    display: flex
+    flex-direction: column
+    // For the sticky footer:
+    flex-shrink: 0
 
-  margin:
-    top: 80px
-  // Here, I should use margin instead of padding. But, it doesn't work
-  // probably because of the sticky footer flex thing, and since the
-  // background is transparent, I do not care enough now (but eventually
-  // should) to fix it. However, if you now how to, please do it, or
-  // tell me how to do it. Love.
-  padding:
-    bottom: 15px
+    margin:
+        top: 80px
+    // Here, I should use margin instead of padding. But, it doesn't work
+    // probably because of the sticky footer flex thing, and since the
+    // background is transparent, I do not care enough now (but eventually
+    // should) to fix it. However, if you now how to, please do it, or
+    // tell me how to do it. Love.
+    padding:
+        bottom: 15px
 
-  font-size: 80%
-  font-weight: 300
+    font-size: 80%
+    font-weight: 300
 
-footer a
-  display: inline
+footer
+    a
+        display: inline
 
-footer p
-  margin: 0
+    p
+        margin: 0
 
-footer, footer a
-  color: $gray
+    *
+        color: $gray
 
 
 ////////////////////
@@ -106,55 +98,59 @@ footer, footer a
 
 body.index
 
-  section#courses
-    border:
-      radius: 0.2cm
-    margin:
-      top: 1cm
+    section#courses
 
-  // Animation and hover
-  section#courses:hover a:not(:hover) *
-    color: $gray
+        border:
+            radius: 0.2cm
+        margin:
+            top: 1cm
 
-  section#courses *
-    transition: color 0.1s ease
+        *
+            transition: color 0.1s ease
 
-  section#courses a.course
-    display: block
-    text-decoration: none
-    padding:
-      left: 0.4cm
-      right: 0.4cm
-      bottom: 0.3cm
-      top: 0.05cm
-    background: $lightgray
+        a.course
 
-  section#courses a.course h1
-    margin:
-      bottom: 10px
-    font-size: 30px
-    font-weight: 600
+            display: block
+            text-decoration: none
+            padding:
+                left: 0.4cm
+                right: 0.4cm
+                bottom: 0.3cm
+                top: 0.05cm
+            background: $lightgray
 
-  // Space on top except on the first course
-  section#courses a.course:not(:first-child)
-    margin:
-      top: 0.4cm
+            h1
+                margin:
+                    bottom: 10px
+                font-size: 30px
+                font-weight: 600
 
-  // Thin font for course info
-  section#courses a.course section.meta
-    font-weight: 300
-    color: $gray
+            section.meta
+                font-weight: 300
+                color: $gray
 
-  section#about
-    margin-top: 1cm
-    padding:
-      top:    0.2cm
-      left:   0.4cm
-      right:  0.4cm
-      bottom: 0.4cm
-    font-size: 90%
-    font-weight: 300
-    color: $black
+
+        // Space on top except on the first course
+        a.course:not(:first-child)
+            margin:
+                top: 0.4cm
+
+    // Animation and hover
+    section#courses:hover
+        a:not(:hover)
+            *
+                color: $gray
+
+    section#about
+        margin-top: 1cm
+        padding:
+            top:        0.2cm
+            left:     0.4cm
+            right:    0.4cm
+            bottom: 0.4cm
+        font-size: 90%
+        font-weight: 300
+        color: $black
 
 
 ///////////////////////////
@@ -163,89 +159,92 @@ body.index
 
 body.single
 
-  h1#title
-    margin:
-      top: 1cm
-      bottom: 0.2cm
-    font-size: 34px
-    font-weight: 700
-    color: $black
+    h1#title
+        margin:
+            top: 1cm
+            bottom: 0.2cm
+        font-size: 34px
+        font-weight: 700
+        color: $black
 
-  section#meta-download section#meta
-    font-weight: 300
-    color: $gray
+    section#meta-download
 
-  section#meta-download
-    display: flex
-    justify-content: space-between
-    flex-direction: horizontal
-    align-items: flex-end
-    margin:
-      bottom: 1.5cm
+        display: flex
+        justify-content: space-between
+        flex-direction: horizontal
+        align-items: flex-end
+        margin:
+            bottom: 1.5cm
 
-  section#course-description
+        section#meta
+            font-weight: 300
+            color: $gray
 
-    // GRID DISPLAY
 
-    display: grid
-    grid-template-columns: 1fr 1fr // Two equal columns
-    grid-template-rows: auto auto  // Two rows with auto height
-    > :nth-child(1)
-      grid-row-start: 1
-      grid-row-end:   span 2
-    > :nth-child(2)
-      grid-row: 1
-      grid-column: 2
-    > :nth-child(3)
-      grid-row: 2
-      grid-column: 2
+    section#course-description
 
-    column-gap: 20px
-    row-gap:    20px
+        // GRID DISPLAY
 
-    // PREVIOUS LAYOUT:
-    //   // First two divs go in the first row
-    //   > :nth-child(1),
-    //   > :nth-child(2)
-    //     grid-row: 1
+        display: grid
+        grid-template-columns: 1fr 1fr // Two equal columns
+        grid-template-rows: auto auto    // Two rows with auto height
+        > :nth-child(1)
+            grid-row-start: 1
+            grid-row-end:     span 2
+        > :nth-child(2)
+            grid-row: 1
+            grid-column: 2
+        > :nth-child(3)
+            grid-row: 2
+            grid-column: 2
 
-    //   // Third div goes in second row, first column
-    //   > :nth-child(3)
-    //     grid-row: 2
-    //     grid-column: 1
+        column-gap: 20px
+        row-gap:        20px
 
-  section#course-description h1
-    font-size: 120%
+        // PREVIOUS LAYOUT:
+        //     // First two divs go in the first row
+        //     > :nth-child(1),
+        //     > :nth-child(2)
+        //         grid-row: 1
 
-  // These are Résumé, Prérequis, and Contenu.
-  // TODO: Find a better selector than just `section`.
-  section#course-description section
-    padding:
-      top:    0.2cm
-      left:   0.4cm
-      right:  0.4cm
-      bottom: 0.4cm
-    background: $lightgray
+        //     // Third div goes in second row, first column
+        //     > :nth-child(3)
+        //         grid-row: 2
+        //         grid-column: 1
 
-  // BUTTONS
+        h1
+            font-size: 120%
 
-  a#download, section#goback-index a
-    display: flex
-    align-items: center
-    justify-content: space-around
-    text-decoration: none
-    padding:
-      left: 0.4cm
-      right: 0.4cm
-    height: 0.8cm
-    font-weight: 600
-    background: $black
-    color: $white
+        // These are Résumé, Prérequis, and Contenu.
+        // TODO: Find a better selector than just `section`.
+        section
+            padding:
+                top:        0.2cm
+                left:     0.4cm
+                right:    0.4cm
+                bottom: 0.4cm
+            background: $lightgray
 
-  section#goback-index a
-    margin:
-      bottom: 0.4cm
-    font-size: 120%
+    // BUTTONS
+
+    a#download, section#goback-index a
+        display: flex
+        align-items: center
+        justify-content: space-around
+        text-decoration: none
+        padding:
+            left: 0.4cm
+            right: 0.4cm
+        height: 0.8cm
+        font-weight: 600
+        background: $black
+        color: $white
+
+    section#goback-index
+        a
+            margin:
+                bottom: 0.4cm
+            font-size: 120%
 
 
 /////////////////////
