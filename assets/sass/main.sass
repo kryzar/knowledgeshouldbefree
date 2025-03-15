@@ -83,30 +83,27 @@ footer, footer a
   color: $gray
 
 
-
 ////////////////////
 //// INDEX ONLY ////
 ////////////////////
 
 body.index
 
-  #courses
+  section#courses
     border:
       radius: 0.2cm
     margin:
       top: 1cm
 
   // Animation and hover
-  #courses:hover a:not(:hover) *
+  section#courses:hover a:not(:hover) *
     color: $gray
 
-  #courses *
+  section#courses *
     transition: color 0.1s ease
 
-  #courses a
+  section#courses a.course
     text-decoration: none
-
-  #courses .course
     display: block
     background: $lightgray
     padding:
@@ -115,7 +112,7 @@ body.index
       bottom: 0.3cm
       top: 0.05cm
 
-  #courses .course h1
+  section#courses a.course h1
     margin:
       bottom: 10px
 
@@ -123,17 +120,17 @@ body.index
     font-weight: 600
 
   // Space on top except on the first course
-  #courses .course:not(:first-child)
+  section#courses a.course:not(:first-child)
     margin:
       top: 0.4cm
 
   // Thin font for course info
-  #courses .course .meta
+  section#courses a.course section.meta
     color: $gray
 
     font-weight: 300
 
-  #about
+  section#about
     color: $black
     font-size: 90%
     font-weight: 300
@@ -222,7 +219,7 @@ body.single
 
   // BUTTONS
 
-  a#download, #goback-index a
+  a#download, section#goback-index a
     display: flex
     font-weight: 600
     justify-content: space-around
@@ -235,7 +232,7 @@ body.single
     background: $black
     color: $white
 
-  #goback-index a
+  section#goback-index a
     font-size: 120%
     margin:
       bottom: 0.4cm
