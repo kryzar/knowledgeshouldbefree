@@ -1,3 +1,24 @@
+///////////////////////////
+//// CODE ORGANIZATION ////
+///////////////////////////
+
+// 1. When in doubt, ask.
+//
+// 2. Write SASS, not CSS.
+//
+// 3. Always specify the type of the class or identifier. For example, write
+//   `section.foo` or `a#bar`, instead of just `.foo` or `#bar`.
+//
+// 4. Use the `body` classes `body.index` or `body.single`.
+//
+// 5. For organizing code inside a selector, order as:
+//    myselector
+//        // 0. Everything that does not fit below (e.g. flexbox)
+//        // 1. Margins, padding, sizes
+//        // 2. Font sizes and settings
+//        // 3. Colors
+
+
 ///////////////////
 //// VARIABLES ////
 ///////////////////
@@ -56,8 +77,6 @@ footer
   // For the sticky footer:
   flex-shrink: 0
 
-  // MARGINS
-
   margin:
     top: 80px
   // Here, I should use margin instead of padding. But, it doesn't work
@@ -67,8 +86,6 @@ footer
   // tell me how to do it. Love.
   padding:
     bottom: 15px
-
-  // FONT SIZES
 
   font-size: 80%
   font-weight: 300
@@ -103,19 +120,18 @@ body.index
     transition: color 0.1s ease
 
   section#courses a.course
-    text-decoration: none
     display: block
-    background: $lightgray
+    text-decoration: none
     padding:
       left: 0.4cm
       right: 0.4cm
       bottom: 0.3cm
       top: 0.05cm
+    background: $lightgray
 
   section#courses a.course h1
     margin:
       bottom: 10px
-
     font-size: 30px
     font-weight: 600
 
@@ -126,20 +142,19 @@ body.index
 
   // Thin font for course info
   section#courses a.course section.meta
+    font-weight: 300
     color: $gray
 
-    font-weight: 300
-
   section#about
-    color: $black
-    font-size: 90%
-    font-weight: 300
     margin-top: 1cm
     padding:
       top:    0.2cm
       left:   0.4cm
       right:  0.4cm
       bottom: 0.4cm
+    font-size: 90%
+    font-weight: 300
+    color: $black
 
 
 ///////////////////////////
@@ -149,16 +164,16 @@ body.index
 body.single
 
   h1#title
-    color: $black
-    font-size: 34px
-    font-weight: 700
     margin:
       top: 1cm
       bottom: 0.2cm
+    font-size: 34px
+    font-weight: 700
+    color: $black
 
   section#meta-download section#meta
-    color: $gray
     font-weight: 300
+    color: $gray
 
   section#meta-download
     display: flex
@@ -175,17 +190,12 @@ body.single
     display: grid
     grid-template-columns: 1fr 1fr // Two equal columns
     grid-template-rows: auto auto  // Two rows with auto height
-
-    // First two divs go in the first row
     > :nth-child(1)
       grid-row-start: 1
       grid-row-end:   span 2
-
-    // Third div goes in second row, first column
     > :nth-child(2)
       grid-row: 1
       grid-column: 2
-
     > :nth-child(3)
       grid-row: 2
       grid-column: 2
@@ -210,32 +220,32 @@ body.single
   // These are Résumé, Prérequis, and Contenu.
   // TODO: Find a better selector than just `section`.
   section#course-description section
-    background: $lightgray
     padding:
       top:    0.2cm
       left:   0.4cm
       right:  0.4cm
       bottom: 0.4cm
+    background: $lightgray
 
   // BUTTONS
 
   a#download, section#goback-index a
     display: flex
-    font-weight: 600
+    align-items: center
     justify-content: space-around
     text-decoration: none
     padding:
       left: 0.4cm
       right: 0.4cm
     height: 0.8cm
-    align-items: center
+    font-weight: 600
     background: $black
     color: $white
 
   section#goback-index a
-    font-size: 120%
     margin:
       bottom: 0.4cm
+    font-size: 120%
 
 
 /////////////////////
