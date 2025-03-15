@@ -2,7 +2,6 @@
 //// VARIABLES ////
 ///////////////////
 
-
 $vp_width: 90%
 
 $white:     #ffffff
@@ -14,6 +13,7 @@ $black:     #061a40
 // Previously used colors that go well with this palette:
 //   $red: #ed254e
 //   $blue: #058ed9
+
 
 //////////////////////
 // GENERAL SETTINGS //
@@ -83,53 +83,10 @@ footer, footer a
   color: $gray
 
 
-///////////////////
-// FONT SETTINGS //
-///////////////////
 
-
-h1#title
-  color: $black
-  font-size: 34px
-  font-weight: 700
-  margin:
-    top: 1cm
-    bottom: 0.2cm
-
-section#meta
-  color: $gray
-  font-weight: 300
-
-section#meta-download
-  display: flex
-  justify-content: space-between
-  flex-direction: horizontal
-  align-items: flex-end
-  margin:
-    bottom: 1.5cm
-
-a#download, #index-link a
-  display: flex
-  font-weight: 600
-  justify-content: space-around
-  text-decoration: none
-  padding:
-    left: 0.4cm
-    right: 0.4cm
-  height: 0.8cm
-  align-items: center
-  background: $black
-  color: $white
-
-#index-link a
-  font-size: 120%
-  margin:
-    bottom: 0.4cm
-
-
-///////////////////
+////////////////////
 //// INDEX ONLY ////
-///////////////////
+////////////////////
 
 #courses
   border:
@@ -190,6 +147,26 @@ a#download, #index-link a
 //// COURSE PAGES ONLY ////
 ///////////////////////////
 
+h1#title
+  color: $black
+  font-size: 34px
+  font-weight: 700
+  margin:
+    top: 1cm
+    bottom: 0.2cm
+
+section#meta-download section#meta
+  color: $gray
+  font-weight: 300
+
+section#meta-download
+  display: flex
+  justify-content: space-between
+  flex-direction: horizontal
+  align-items: flex-end
+  margin:
+    bottom: 1.5cm
+
 section#course-description
 
   // GRID DISPLAY
@@ -226,7 +203,6 @@ section#course-description
   //     grid-row: 2
   //     grid-column: 1
 
-
 section#course-description h1
   font-size: 120%
 
@@ -238,6 +214,26 @@ section#course-description section
     top:    0.2cm
     left:   0.4cm
     right:  0.4cm
+    bottom: 0.4cm
+
+// BUTTONS
+
+a#download, #goback-index a
+  display: flex
+  font-weight: 600
+  justify-content: space-around
+  text-decoration: none
+  padding:
+    left: 0.4cm
+    right: 0.4cm
+  height: 0.8cm
+  align-items: center
+  background: $black
+  color: $white
+
+#goback-index a
+  font-size: 120%
+  margin:
     bottom: 0.4cm
 
 
