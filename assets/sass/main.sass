@@ -37,6 +37,9 @@ body
 
   color: $black
 
+body, html
+  background: $white
+
 main
   // For the sticky footer:
   flex: 1 0 auto
@@ -80,81 +83,10 @@ footer, footer a
   color: $gray
 
 
-////////////////////////////////////////
-// SIZES, MARGINS, PADDING, AND STUFF //
-////////////////////////////////////////
-
-.course h1
-  margin:
-    bottom: 10px
-
-/////////////////////////////////
-// GRID FOR COURSE DESCRIPTION //
-/////////////////////////////////
-
-
-body, html
-  background: $white
-
-// Do the same (kinda) for the courses on the index
-#courses:hover a:not(:hover) *
-  color: $gray
-
-.course-meta
-  color: $gray
-
-// Transitions
-
-#courses *
-  transition: color 0.1s ease
-
 ///////////////////
 // FONT SETTINGS //
 ///////////////////
 
-#course-meta h1
-  font-weight: 600
-  font-size: 60px
-  text-transform: uppercase
-
-#courses a
-  text-decoration: none
-
-.course-meta
-  font-weight: 300
-
-.course h3
-  font-size: 100%
-  font-style: italic
-  font-weight: 500
-
-//////////////
-// NEW ORGA //
-//////////////
-
-section#courses
-  border:
-    radius: 0.2cm
-  margin:
-    top: 1cm
-
-section#courses .course
-  display: block
-  background: $lightgray
-  padding:
-    left: 0.4cm
-    right: 0.4cm
-    bottom: 0.3cm
-    top: 0.05cm
-
-section#courses .course h1
-  color: $black
-  font-size: 30px
-  font-weight: 600
-
-section#courses .course:not(:first-child)
-  margin:
-    top: 0.4cm
 
 h1#title
   color: $black
@@ -198,6 +130,49 @@ a#download, #index-link a
 ///////////////////
 //// INDEX ONLY ////
 ///////////////////
+
+#courses
+  border:
+    radius: 0.2cm
+  margin:
+    top: 1cm
+
+// Animation and hover
+#courses:hover a:not(:hover) *
+  color: $gray
+
+#courses *
+  transition: color 0.1s ease
+
+#courses a
+  text-decoration: none
+
+#courses .course
+  display: block
+  background: $lightgray
+  padding:
+    left: 0.4cm
+    right: 0.4cm
+    bottom: 0.3cm
+    top: 0.05cm
+
+#courses .course h1
+  margin:
+    bottom: 10px
+
+  font-size: 30px
+  font-weight: 600
+
+// Space on top except on the first course
+#courses .course:not(:first-child)
+  margin:
+    top: 0.4cm
+
+// Thin font for course info
+#courses .course .meta
+  color: $gray
+
+  font-weight: 300
 
 #about
   color: $black
