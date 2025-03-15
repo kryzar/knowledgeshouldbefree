@@ -13,9 +13,9 @@
   <section id='courses'>
     {{ range (where .Site.Pages "Section" "cours") }}
      {{ range .Pages.ByTitle }}
-      <a class='course-card' href="{{ .Permalink }}">
+      <a class='course' href="{{ .Permalink }}">
         <h1>{{ .Title }}</h1>
-        <section class='course-card-meta'>
+        <section class='course-meta'>
           {{ .Params.Prof }} ⋅
           {{ .Params.Niveau }} ⋅
           {{ .Params.Université }} ⋅
