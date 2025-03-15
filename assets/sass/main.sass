@@ -130,16 +130,17 @@ body.index
                 color: $gray
 
 
-        // Space on top except on the first course
-        a.course:not(:first-child)
-            margin:
-                top: 0.4cm
+            // Space on top except on the first course
+            &:not(:first-child)
+                margin:
+                    top: 0.4cm
 
-    // Animation and hover
-    section#courses:hover
-        a:not(:hover)
-            *
-                color: $gray
+        // Animation and hover
+        &:hover
+            a:not(:hover)
+                *
+                    color: $gray
+
 
     section#about
         margin-top: 1cm
