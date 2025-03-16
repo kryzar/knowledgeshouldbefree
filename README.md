@@ -19,16 +19,18 @@ particulier, aucun mécanisme de collecte ne sera utilisé ou implémenté.
 
 ## Pour les développeurs et développeuses
 
-Le site est *statique*. En particulier, il n'est bâti qu'avec HTML et CSS, et
-sans JS. Pour limiter la redondance de code, nous utilisons
+Le site est *statique*. En particulier, il n'est bâti qu'avec HTML et ~~CSS~~
+SASS, et sans JS. Pour limiter la redondance de code, nous utilisons
 [Hugo](https://gohugo.io/), un [*générateur de sites
 statiques*](https://jamstack.org/generators/). Cela permet de définir un unique
 *template* HTML pour les pages de cours, et d'écrire le contenu des pages web
 en Markdown. C'est bien plus digeste.
 
 Il y a donc une phase de compilation (*build*) pour pouvoir visualiser le site.
-Après avoir installé Hugo, et cloné le dépôt, ouvrir un terminal, aller dans le
-répertoire du dépôt, et exécuter :
+Il faut donc installer Hugo, ainsi que [Dart
+Sass](https://gohugo.io/functions/css/sass/#dart-sass) pour réaliser cette
+étape. Cela fait, et après avoir cloné le dépôt, il faut ouvrir un terminal,
+aller dans le répertoire du dépôt, et exécuter :
 
 ```sh
 hugo server
