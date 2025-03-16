@@ -15,18 +15,21 @@
 
 <!-- And regular stylesheets below -->
 
-{{/* To make Sass/SCSS work in Hugo, see:
+{{/*
 
-         https://gohugo.io/hugo-pipes/transpile-sass-to-css/#usage
+    To make Sass/SCSS work in Hugo, see:
+
+      https://gohugo.io/hugo-pipes/transpile-sass-to-css/#usage
+
+    Also, one must have Dart Sass installed. By default, Hugo transpiles SASS
+    to CSS using LibSass, but LibSass is deprecated. For `@use` queries, one needs
+    DartSass:
+
+      https://gohugo.io/functions/css/sass/#installation-overview
+
 */}}
 
-{{ $opts := dict "transpiler" "libsass" }}
-{{- with resources.Get "sass/main.sass" | toCSS $opts }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
+{{ $opts := dict "transpiler" "dartsass" }}
+{{- with resources.Get "sass/main.sass" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{- end }}
