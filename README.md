@@ -1,6 +1,6 @@
 # Knowledge should be free
 
-Code source pour le site web
+> Code source pour le site web
 [knowledgeshouldbefree.org](https://knowledgeshouldbefree.org).
 
 Ce site web héberge des polycopiés et exercices de mathématiques, de licence ou
@@ -13,6 +13,15 @@ cryptographie](https://knowledgeshouldbefree.org/cours/crypto-2021-m1/), et
 locaux](https://knowledgeshouldbefree.org/cours/corps_locaux-2000-m2/). Plus
 généralement, notre démarche s'inscrit dans une vision universitaire de partage
 des connaissances, basée sur l'exigence de qualité et la rigueur.
+
+## Table des matières
+
+* [Knowledge should be free](#knowledge-should-be-free)
+   * [Objectifs futurs](#objectifs-futurs)
+   * [Hébergement et confidentialité](#hébergement-et-confidentialité)
+   * [Pour les développeurs et développeuses](#pour-les-développeurs-et-développeuses)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 
 ## Objectifs futurs
 
@@ -30,7 +39,7 @@ aussi écrire des *reviews* de matériels déjà hébergés. Toutefois, pour que
 tels changements soient mis en place, le site internet devra être établi comme
 outil utile d'une communauté active — pour l'heure, la pertinence du projet au
 delà d'un simple hommage à un professeur est encore à prouver.
-- Ajout d'une barre de recherche, et de tags (disciplines, années scolaires,
+- Ajout d'une barre de recherche, et de *tags* (disciplines, années scolaires,
 niveau, auteurs, etc). D'un point de vue technique, cela doit être possible en
 n'utilisant que des fonctionnalités natives d'Hugo.
 - Une meilleure présentation du téléchargement. Pour l'instant, le bouton
