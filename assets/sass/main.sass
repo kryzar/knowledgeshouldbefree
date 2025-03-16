@@ -27,7 +27,7 @@
 $vp_width: 90%
 
 // Gap between rows and cols in the grid of a course page
-$row_col_gap: 20px
+$row_col_gap: 0.5cm
 
 // Colors
 $white:     #ffffff
@@ -50,7 +50,7 @@ $black:     #061a40
     color: $gray
 
 @mixin course-title-font-settings
-    font-size: 1.8rem
+    font-size: 2rem
     font-weight: 600
 
 @mixin button-style
@@ -98,14 +98,14 @@ footer
     flex-shrink: 0
 
     margin:
-        top: 80px
+        top: 2cm
     // Here, I should use margin instead of padding. But, it doesn't work
     // probably because of the sticky footer flex thing, and since the
     // background is transparent, I do not care enough now (but eventually
     // should) to fix it. However, if you now how to, please do it, or
     // tell me how to do it. Love.
     padding:
-        bottom: 15px
+        bottom: 0.5cm
 
     font-size: 0.8rem
     font-weight: 300
@@ -141,18 +141,17 @@ body.index
 
             display: block
             text-decoration: none
-            padding:
-                left:   0.4cm
-                right:  0.4cm
-                bottom: 0.3cm
-                // I don't understand why this plays a difference,
-                // but it does:
-                top:    0.05cm
+            padding: 0.6cm 0.4cm
             background: $lightgray
 
             h1
                 margin:
-                    bottom: 10px
+                    // Reset the top-margin (and top-padding) in order to
+                    // control things with the a.course padding
+                    top: 0
+                    bottom: 0.3em
+                padding:
+                    top: 0
                 @include course-title-font-settings
 
             section.meta
@@ -171,12 +170,9 @@ body.index
 
 
     section#about
-        margin-top: 1cm
-        padding:
-            top:    0.2cm
-            left:   0.4cm
-            right:  0.4cm
-            bottom: 0.4cm
+        margin:
+            top: 1cm
+        padding: 0.2cm 0.4cm
         font-size: 0.9rem
         font-weight: 300
         color: $black
@@ -245,11 +241,7 @@ body.single
         // These are Résumé, Prérequis, and Contenu.
         // TODO: Find a better selector than just `section`.
         section
-            padding:
-                top:    0.2cm
-                left:   0.4cm
-                right:  0.4cm
-                bottom: 0.4cm
+            padding: 0.2cm 0.4cm
             background: $lightgray
 
     footer
