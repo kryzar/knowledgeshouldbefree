@@ -203,8 +203,7 @@ body.single
     section#meta-download
         display: flex
         justify-content: space-between
-        flex-direction: horizontal
-        align-items: flex-end
+        flex-direction: column
         margin:
             bottom: 1.5cm
 
@@ -212,39 +211,16 @@ body.single
             @include meta-font-settings
 
         a#download
-          @include button-style
+            @include button-style
 
     section#course-description
-        // GRID DISPLAY
+        // Grid display:
         display: grid
-        grid-template-columns: 1fr 1fr // Two equal columns
-        grid-template-rows: auto auto    // Two rows with auto height
-        > :nth-child(1)
-            grid-row-start: 1
-            grid-row-end: span 2
-        > :nth-child(2)
-            grid-row:    1
-            grid-column: 2
-        > :nth-child(3)
-            grid-row:    2
-            grid-column: 2
         column-gap: $row_col_gap
         row-gap:    $row_col_gap
-
-        // PREVIOUS LAYOUT:
-        //     // First two divs go in the first row
-        //     > :nth-child(1),
-        //     > :nth-child(2)
-        //         grid-row: 1
-
-        //     // Third div goes in second row, first column
-        //     > :nth-child(3)
-        //         grid-row: 2
-        //         grid-column: 1
-
+        // And the rest:
         h1
             font-size: 1.2rem
-
         // These are Résumé, Prérequis, and Contenu.
         // TODO: Find a better selector than just `section`.
         section
@@ -252,11 +228,45 @@ body.single
             background: $lightgray
 
     footer
-      section#goback-index
-          a
-              @include button-style
-              margin:
-                  bottom: 0.4cm
+        section#goback-index
+            a
+                @include button-style
+                margin:
+                    bottom: 0.4cm
+
+
+// Those media queries are not very nice, there is a lot of code duplication.
+// I tried to use include-media.scss, but encountered some problems; see issue
+// 238: https://github.com/eduardoboucas/include-media/issues/238.
+// TODO: To be continued.
+
+@media screen and (min-width: 768px)
+    body.single
+        section#course-description
+            grid-template-columns: 1fr 1fr // Two equal columns
+            grid-template-rows: auto auto    // Two rows with auto height
+            > :nth-child(1)
+                grid-row-start: 1
+                grid-row-end: span 2
+            > :nth-child(2)
+                grid-row:    1
+                grid-column: 2
+            > :nth-child(3)
+                grid-row:    2
+                grid-column: 2
+
+        section#meta-download
+            align-items: flex-end
+            flex-direction: row
+
+@media screen and (max-width: 767px)
+    body.single
+        section#meta-download
+            margin:
+                top: 0.5cm
+            a#download
+                margin:
+                    top: 0.5cm
 
 
 /////////////////////
