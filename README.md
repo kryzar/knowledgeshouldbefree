@@ -1,5 +1,57 @@
 # Knowledge should be free
 
+Code source pour le site web
+[knowledgeshouldbefree.org](https://knowledgeshouldbefree.org).
+
+Ce site web héberge des polycopiés et exercices de mathématiques, de licence ou
+master, dont la qualité est jugée exceptionnelle. Il est aussi un hommage à
+Alain Kraus, mathématicien et professeur à Sorbonne Université de 1991 à 2022,
+dont les cours ont marqué plusieurs générations d'étudiantes et étudiants. Nous
+attirons en particulier l'attention sur le [cours de
+cryptographie](https://knowledgeshouldbefree.org/cours/crypto-2021-m1/), et
+[celui sur les corps
+locaux](https://knowledgeshouldbefree.org/cours/corps_locaux-2000-m2/). Plus
+généralement, notre démarche s'inscrit dans une vision universitaire de partage
+des connaissances, basée sur l'exigence de qualité et la rigueur.
+
+## Objectifs futurs
+
+Le site est minimaliste. Si la forme doit le rester, nous suggérons quelques
+améliorations possibles.
+
+Sur le fond :
+
+- Ajout de matériels de cours d'autres professeurs et professeures. À long
+terme, cela pourra prendre la forme d'un forum où étudiants et professeurs
+pourront proposer de nouveaux ajouts, et en discuter (éventuellement sous
+pseudonyme). Un système de vote, dont les modalités sont encore à définir,
+pourra être mis en place. Grâce à leurs expériences, des professeurs pourraient
+aussi écrire des *reviews* de matériels déjà hébergés. Toutefois, pour que de
+tels changements soient mis en place, le site internet devra être établi comme
+outil utile d'une communauté active — pour l'heure, la pertinence du projet au
+delà d'un simple hommage à un professeur est encore à prouver.
+- Ajout d'une barre de recherche, et de tags (disciplines, années scolaires,
+niveau, auteurs, etc). D'un point de vue technique, cela doit être possible en
+n'utilisant que des fonctionnalités natives d'Hugo.
+- Une meilleure présentation du téléchargement. Pour l'instant, le bouton
+`Télécharger le cours` renvoie vers un `.zip`. Il serait plus utile et pratique
+de renvoyer vers une nouvelle page qui présente l'arborescence de chaque
+fichier en arbre (comme le programme `tree`). L'utilisateur ou utilisatrice
+pourrait voir précisément le contenu des archives, et décider de ne télécharger
+qu'un fichier, ou toute l'archive.
+- Un système de versionnage précis. Cela commande de fixer une convention sur
+le nommage des url.
+- Comme sur Wikipédia, des instances dans d'autres langues. Nous n'hébergeons
+que du matériel en langue française, mais il est envisageable de créer des
+sous-domaines comme `fr.knowledgeshouldbegree.org` ou
+`en.knowledgeshouldbegree.org`. Cela ne peut se faire qu'avec le soutien d'une
+communauté active.
+
+Sur la forme :
+- Un mode sombre.
+- Faire renvoyer [cours/](https://knowledgeshouldbefree.org/cours/) à la page
+d'accueil.
+
 ## Hébergement et confidentialité
 
 Le site est pour l'instant hébergé par l'hébergeur islandais
