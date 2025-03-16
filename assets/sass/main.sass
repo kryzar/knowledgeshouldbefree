@@ -134,9 +134,6 @@ body.index
         margin:
             top: 1cm
 
-        *
-            transition: color 0.1s ease
-
         a.course
 
             display: block
@@ -162,13 +159,6 @@ body.index
                 margin:
                     top: 0.4cm
 
-        // Animation and hover
-        &:hover
-            a:not(:hover)
-                *
-                    color: $gray
-
-
     section#about
         margin:
             top: 1cm
@@ -176,6 +166,24 @@ body.index
         font-size: 0.9rem
         font-weight: 300
         color: $black
+
+
+// Animations only when the device can be hovered on.
+// This is a v4 media querry, explained here: 
+//     https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+@media (hover: hover)
+
+  body.index
+    section#courses:hover
+        a:not(:hover)
+            *
+                color: $gray
+
+        *
+            transition: color 0.1s ease
+
+
 
 
 ///////////////////////////
