@@ -23,8 +23,13 @@
 //// VARIABLES ////
 ///////////////////
 
+// Width of the body: 90% of the viewport
 $vp_width: 90%
 
+// Gap between rows and cols in the grid of a course page
+$row_col_gap: 20px
+
+// Colors
 $white:     #ffffff
 $lightgray: #f7f7f7
 $gray:      #7F899C
@@ -36,6 +41,31 @@ $black:     #061a40
 //   $blue: #058ed9
 
 
+////////////////
+//// MIXINS ////
+////////////////
+
+@mixin meta-font-settings
+    font-weight: 300
+    color: $gray
+
+@mixin course-title-font-settings
+    font-size: 1.8rem
+    font-weight: 600
+
+@mixin button-style
+    display: flex
+    align-items: center
+    justify-content: space-around
+    text-decoration: none
+    padding:
+        left: 0.4cm
+        right: 0.4cm
+    height: 0.8cm
+    font-weight: 600
+    background: $black
+    color: $white
+
 //////////////////////
 // GENERAL SETTINGS //
 //////////////////////
@@ -45,6 +75,7 @@ body
     display: flex
     flex-direction: column
     margin: auto
+    // And usual settings
     max-width: $vp_width
     color: $black
 
@@ -78,7 +109,7 @@ footer
     padding:
         bottom: 15px
 
-    font-size: 80%
+    font-size: 0.8rem
     font-weight: 300
 
 footer
@@ -124,13 +155,10 @@ body.index
             h1
                 margin:
                     bottom: 10px
-                font-size: 30px
-                font-weight: 600
+                @include course-title-font-settings
 
             section.meta
-                font-weight: 300
-                color: $gray
-
+                @include meta-font-settings
 
             // Space on top except on the first course
             &:not(:first-child)
@@ -151,7 +179,7 @@ body.index
             left:   0.4cm
             right:  0.4cm
             bottom: 0.4cm
-        font-size: 90%
+        font-size: 0.9rem
         font-weight: 300
         color: $black
 
@@ -166,12 +194,12 @@ body.single
         margin:
             top: 1cm
             bottom: 0.2cm
-        font-size: 34px
-        font-weight: 700
+        @include course-title-font-settings
         color: $black
 
+    // Naming this section `meta-download` is idiotic.
+    // TODO: Find something better.
     section#meta-download
-
         display: flex
         justify-content: space-between
         flex-direction: horizontal
@@ -180,29 +208,27 @@ body.single
             bottom: 1.5cm
 
         section#meta
-            font-weight: 300
-            color: $gray
+            @include meta-font-settings
 
+        a#download
+          @include button-style
 
     section#course-description
-
         // GRID DISPLAY
-
         display: grid
         grid-template-columns: 1fr 1fr // Two equal columns
         grid-template-rows: auto auto    // Two rows with auto height
         > :nth-child(1)
             grid-row-start: 1
-            grid-row-end:     span 2
+            grid-row-end: span 2
         > :nth-child(2)
-            grid-row: 1
+            grid-row:    1
             grid-column: 2
         > :nth-child(3)
-            grid-row: 2
+            grid-row:    2
             grid-column: 2
-
-        column-gap: 20px
-        row-gap:        20px
+        column-gap: $row_col_gap
+        row-gap:    $row_col_gap
 
         // PREVIOUS LAYOUT:
         //     // First two divs go in the first row
@@ -216,7 +242,7 @@ body.single
         //         grid-column: 1
 
         h1
-            font-size: 120%
+            font-size: 1.2rem
 
         // These are Résumé, Prérequis, and Contenu.
         // TODO: Find a better selector than just `section`.
@@ -228,26 +254,13 @@ body.single
                 bottom: 0.4cm
             background: $lightgray
 
-    // BUTTONS
-
-    a#download, section#goback-index a
-        display: flex
-        align-items: center
-        justify-content: space-around
-        text-decoration: none
-        padding:
-            left: 0.4cm
-            right: 0.4cm
-        height: 0.8cm
-        font-weight: 600
-        background: $black
-        color: $white
-
-    section#goback-index
-        a
-            margin:
-                bottom: 0.4cm
-            font-size: 120%
+    footer
+      section#goback-index
+          a
+              @include button-style
+              margin:
+                  bottom: 0.4cm
+              font-size: 1rem
 
 
 /////////////////////
