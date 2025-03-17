@@ -5,9 +5,9 @@
 
 Ce site web héberge des polycopiés et exercices de mathématiques, de licence ou
 master, dont la qualité est jugée exceptionnelle. Il est aussi un hommage à
-Alain Kraus, mathématicien et professeur à Sorbonne Université de 1991 à 2022,
-dont les cours ont marqué plusieurs générations d'étudiantes et étudiants. Nous
-attirons en particulier l'attention sur le [cours de
+Alain Kraus, mathématicien et enseignant-chercheur à Sorbonne Université de
+1991 à 2022, dont les cours ont marqué plusieurs génération d'étudiantes et
+étudiants. Nous attirons en particulier l'attention sur le [cours de
 cryptographie](https://knowledgeshouldbefree.org/cours/crypto-2021-m1/), et
 [celui sur les corps
 locaux](https://knowledgeshouldbefree.org/cours/corps_locaux-2000-m2/). Plus
@@ -34,7 +34,7 @@ Sur le fond :
 terme, cela pourra prendre la forme d'un forum où étudiants et professeurs
 pourront proposer de nouveaux ajouts, et en discuter (éventuellement sous
 pseudonyme). Un système de vote, dont les modalités sont encore à définir,
-pourra être mis en place. Grâce à leurs expériences, des professeurs pourraient
+pourra être mis en place. Grâce à leur expérience, des professeurs pourraient
 aussi écrire des *reviews* de matériels déjà hébergés. Toutefois, pour que de
 tels changements soient mis en place, le site internet devra être établi comme
 outil utile d'une communauté active — pour l'heure, la pertinence du projet au
