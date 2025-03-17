@@ -38,7 +38,7 @@ pourra être mis en place. Grâce à leurs expériences, des professeurs pourrai
 aussi écrire des *reviews* de matériels déjà hébergés. Toutefois, pour que de
 tels changements soient mis en place, le site internet devra être établi comme
 outil utile d'une communauté active — pour l'heure, la pertinence du projet au
-delà d'un simple hommage à un professeur est encore à prouver.
+delà d'un hommage à un professeur est encore à prouver.
 - Ajout d'une barre de recherche, et de *tags* (disciplines, années scolaires,
 niveau, auteurs, etc). D'un point de vue technique, cela doit être possible en
 n'utilisant que des fonctionnalités natives d'Hugo.
